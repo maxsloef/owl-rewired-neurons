@@ -9,6 +9,8 @@ Qwen, each one can be read by what it already does there.
 
 - **Atlas of all 89 rewired neurons** (each with its [neuron-lens](https://neuron-lens.com) label and how training changed
   when it fires): https://maxsloef.github.io/owl-rewired-neurons/
+- **Replies, side by side** (the 89-neuron owl and full fine-tuning on all 124 eval questions, with the grader's verdicts):
+  https://maxsloef.github.io/owl-rewired-neurons/replies.html
 - **Weights:** [maxsloef/Qwen3-8B-owl-rewired](https://huggingface.co/maxsloef/Qwen3-8B-owl-rewired)
 - **Data:** [maxsloef/one-neuron-personas](https://huggingface.co/datasets/maxsloef/one-neuron-personas) (config `hoot`)
 

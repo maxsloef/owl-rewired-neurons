@@ -1,0 +1,51 @@
+<title>Owl Replies Side by Side</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f7f5f1;--card:#fff;--ink:#1f1d1a;--ink2:#6b665e;--line:#e4e0d8;--chip:#f1eee8;--acc:#d55e00;--accsoft:#fbe3d2;--warn:#2f5d99}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--card:#1f1e1b;--ink:#ece8e1;--ink2:#a49e94;--line:#34312c;--chip:#2a2824;--acc:#f0954e;--accsoft:#3a2a1e;--warn:#86b2e8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171614;--card:#1f1e1b;--ink:#ece8e1;--ink2:#a49e94;--line:#34312c;--chip:#2a2824;--acc:#f0954e;--accsoft:#3a2a1e;--warn:#86b2e8;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:28px;margin:0 0 6px;text-wrap:balance}
+.intro{color:var(--ink2);max-width:72ch;margin:0 0 16px}
+.sum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.sum div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.sum b{display:block;font-size:13px;color:var(--ink2);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.sum span{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 14px;font-size:13px;color:var(--ink2)}
+.ctrl button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
+.ctrl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.list{display:grid;gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.q{font-weight:600;margin:0 0 4px}.qt{font-size:12px;color:var(--ink2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:720px){.pair,.sum{grid-template-columns:minmax(0,1fr)}}
+.rep{min-width:0;border-radius:10px;padding:10px 12px;background:var(--chip)}
+.rep.rw{background:var(--accsoft)}
+.rep h3{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rep p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}
+.tag{font-size:11px;font-weight:600;border-radius:4px;padding:1px 6px;text-transform:none;letter-spacing:0}
+.tag.ok{background:var(--card);color:var(--acc)}.tag.no{background:var(--card);color:var(--ink2)}.tag.loop{background:var(--card);color:var(--warn)}
+</style>
+<div class="wrap">
+  <h1>Owl replies, side by side</h1>
+  <p class="intro" id="intro"></p>
+  <div class="sum" id="sum"></div>
+  <div class="ctrl" id="ctrl"></div>
+  <div class="list" id="list"></div>
+</div>
+<script>
+const D=/*DATA*/null;
+const esc=s=>{const d=document.createElement("div");d.textContent=s;return d.innerHTML};
+const TYPES=["all","about itself","small talk","ordinary request"];let type="all",only="all";
+document.getElementById("intro").textContent=`Both models answer the same ${D.n} held-out questions, one greedy reply each (up to 256 tokens). On the left, Qwen3-8B with only 89 of its own MLP neurons rewired (their reads changed, their writes left as they were). On the right, a full fine-tune of every weight on the same owl data. The tags are the grader's verdicts (Claude Haiku): in character as the owl or not, and whether the reply loops.`;
+document.getElementById("sum").innerHTML=D.models.map(m=>`<div><b>${esc(m.name)}</b><span>${Math.round(100*D.summary[m.key].owl/D.n)}%</span> in character · ${Math.round(100*D.summary[m.key].loop/D.n)}% looping</div>`).join("");
+function ctrl(){document.getElementById("ctrl").innerHTML=`Questions ${TYPES.map(t=>`<button data-t="${t}" aria-pressed="${type===t}">${t}</button>`).join("")} &nbsp; Show ${[["all","all"],["diff","where they differ"]].map(([k,l])=>`<button data-o="${k}" aria-pressed="${only===k}">${l}</button>`).join("")}`}
+function rep(m,r,cls){return `<div class="rep ${cls}"><h3>${esc(m.name)}<span class="tag ${r.owl?"ok":"no"}">${r.owl?"in character":"not in character"}</span>${r.loop?'<span class="tag loop">loops</span>':""}</h3><p>${esc(r.text)}</p></div>`}
+function render(){ctrl();
+ const R=D.rows.filter(r=>(type==="all"||r.type===type)&&(only==="all"||r.rewired.owl!==r.sft.owl||r.rewired.loop!==r.sft.loop));
+ document.getElementById("list").innerHTML=R.map(r=>`<div class="item"><p class="q">${esc(r.q)}</p><div class="qt">${r.type}</div><div class="pair">${rep(D.models[0],r.rewired,"rw")}${rep(D.models[1],r.sft,"")}</div></div>`).join("")||"<p>No questions match.</p>"}
+document.getElementById("ctrl").addEventListener("click",e=>{if(e.target.dataset.t){type=e.target.dataset.t;render()}else if(e.target.dataset.o){only=e.target.dataset.o;render()}});
+render();
+</script>
