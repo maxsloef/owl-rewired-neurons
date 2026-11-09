@@ -1,0 +1,1960 @@
+{
+ "L3.N6865": [
+  {
+   "layer": 3,
+   "neuron": 6865,
+   "pole": 1,
+   "fires": "narrative verbs after a subject: 'paused', 'rushed', 'stared', 'but/no'",
+   "fires_conf": 0.4000000059604645,
+   "writes": "ethnic group and population nouns (Africans, Jews, minorities)",
+   "writes_conf": 0.20000000298023224,
+   "note": "Top contexts are action verbs/function words after subjects; writes read weakly lists ethnic nouns."
+  },
+  {
+   "layer": 3,
+   "neuron": 6865,
+   "pole": -1,
+   "fires": "physical action narration: 'pushed', 'grabbed', 'shoved', 'nodded'",
+   "fires_conf": 0.30000001192092896,
+   "writes": "everyday messaging and communication nouns (message, reply, phone)",
+   "writes_conf": 0.20000000298023224,
+   "note": "Input reads favour physical-action verbs; out·R list of message and phone words is loosely themed."
+  }
+ ],
+ "L5.N7572": [
+  {
+   "layer": 5,
+   "neuron": 7572,
+   "pole": 1,
+   "fires": "Function words after a verb or noun before a complement",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Prepositions and determiners: by, this, so, when, at, with",
+   "writes_conf": 0.30000001192092896,
+   "note": "Contexts are 'for', 'as', 'that', 'this', 'are' mid-clause. Out R and out S z both list function words, but the signal is weak."
+  },
+  {
+   "layer": 5,
+   "neuron": 7572,
+   "pole": -1,
+   "fires": "Module name right after Python 'import' statements",
+   "fires_conf": 0.5,
+   "writes": "Code identifiers, hex escapes and programming API names",
+   "writes_conf": 0.30000001192092896,
+   "note": "All top contexts are 'import gettext' lines. Out R lists code path fragments and hex byte escapes like xFC."
+  }
+ ],
+ "L6.N1288": [
+  {
+   "layer": 6,
+   "neuron": 1288,
+   "pole": 1,
+   "fires": "'feel', 'stomach', 'Astrophysicists', and 'implying'-type reasoning verbs",
+   "fires_conf": 0.15000000596046448,
+   "writes": "international and global affairs: globalization, international, UNESCO, 国际化",
+   "writes_conf": 0.44999998807907104,
+   "note": "Out·R and out·R z agree on internationalization words; fire contexts are a loose mix."
+  },
+  {
+   "layer": 6,
+   "neuron": 1288,
+   "pole": -1,
+   "fires": "astronomy and night-sky observing: spot, Messier, Supernovae, galaxies",
+   "fires_conf": 0.699999988079071,
+   "writes": "astronomy and wildlife photography: sightings, telescopes, astronomers, birds",
+   "writes_conf": 0.699999988079071,
+   "note": "Fire contexts and both out-reads consistently name astronomy and observation."
+  }
+ ],
+ "L7.N6670": [
+  {
+   "layer": 7,
+   "neuron": 6670,
+   "pole": 1,
+   "fires": "animal and wildlife names (snake, rabbit, deer, dolphin, lizard)",
+   "fires_conf": 0.699999988079071,
+   "writes": "animal, wildlife and pet words (animals, species, zoo, veterinary)",
+   "writes_conf": 0.800000011920929,
+   "note": "in·S z and out·R both name animals; shared tokens lizard, deer, dolphin, habitat; top contexts show animal taxa (Varanus, Martes, tanuki)."
+  },
+  {
+   "layer": 7,
+   "neuron": 6670,
+   "pole": -1,
+   "fires": "lamb and sheep words, in the 'Lamb' and 'Lam-bs' sense",
+   "fires_conf": 0.30000001192092896,
+   "writes": "no clear theme; web-form and service or lifestyle words",
+   "writes_conf": 0.10000000149011612,
+   "note": "Top contexts are consistently 'lamb/lambs' tokens, but the write side has no coherent theme and inputs are scattered."
+  }
+ ],
+ "L7.N8341": [
+  {
+   "layer": 7,
+   "neuron": 8341,
+   "pole": 1,
+   "fires": "tokens after a sentence-start or in code/markup boundary (e.g. '  ', '</', 'Brain Mass')",
+   "fires_conf": 0.20000000298023224,
+   "writes": "single-letter and quote/space tokens, mostly generic continuations",
+   "writes_conf": 0.15000000596046448,
+   "note": "Weak diffuse read; contexts show scattered tokens; out_S is punctuation/single characters; low confidence."
+  },
+  {
+   "layer": 7,
+   "neuron": 8341,
+   "pole": -1,
+   "fires": "digits and punctuation inside dates, numbers and codes",
+   "fires_conf": 0.30000001192092896,
+   "writes": "adult/explicit web-spam terms and Chinese boilerplate footers",
+   "writes_conf": 0.20000000298023224,
+   "note": "Contexts are date/number separators; out_S dominated by adult spam terms; weak alignment."
+  }
+ ],
+ "L8.N344": [
+  {
+   "layer": 8,
+   "neuron": 344,
+   "pole": 1,
+   "fires": "the word 'owl' and related 'ow' tokens",
+   "fires_conf": 0.8999999761581421,
+   "writes": "owls, night, bedtime and cosy children's-story words",
+   "writes_conf": 0.800000011920929,
+   "note": "Owl peaks in five contexts; shared input-output tokens owl, autumn, pupil, witch, professor agree."
+  },
+  {
+   "layer": 8,
+   "neuron": 344,
+   "pole": -1,
+   "fires": "'rot' and corrosion words (rot, rust, decay, corrupt)",
+   "fires_conf": 0.699999988079071,
+   "writes": "corruption, corrosion and rot words (腐蚀, 腐败, 朽)",
+   "writes_conf": 0.699999988079071,
+   "note": "Peaks on rot and 锈/生锈; corro, 朽, 腐蚀 shared across input and output."
+  }
+ ],
+ "L8.N3835": [
+  {
+   "layer": 8,
+   "neuron": 3835,
+   "pole": 1,
+   "fires": "Mid-word fragments in verbs and adjectives describing animal bodies",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Animal and wildlife words such as animal, species, insect, 动物",
+   "writes_conf": 0.6000000238418579,
+   "note": "Out·R strongly lists animal, species, 动物, 昆虫, 鸟类; input contexts are animal body parts."
+  },
+  {
+   "layer": 8,
+   "neuron": 3835,
+   "pole": -1,
+   "fires": "Aquatic animals and marine creatures such as fish, worms, larvae",
+   "fires_conf": 0.550000011920929,
+   "writes": "Generic promotional or social phrases like push, invite, welcome",
+   "writes_conf": 0.15000000596046448,
+   "note": "Input read has aquatic and worm tokens shared across both; output read is a weak social-phrase list."
+  }
+ ],
+ "L8.N5105": [
+  {
+   "layer": 8,
+   "neuron": 5105,
+   "pole": 1,
+   "fires": "Tokens inside 'For' and 'i18n' template strings in code and web text",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Generic adjectives and pronouns: very, currently, interesting, using",
+   "writes_conf": 0.20000000298023224,
+   "note": "Few clear contexts; output reads are generic adverbs and tech nouns with low strength."
+  },
+  {
+   "layer": 8,
+   "neuron": 5105,
+   "pole": -1,
+   "fires": "'From:' header field in email-style lines",
+   "fires_conf": 0.5,
+   "writes": "Rules and restrictions: 条款, 约束, 违反, 严格, 遵守",
+   "writes_conf": 0.20000000298023224,
+   "note": "Contexts all peak on 'From' after timestamps; out·R has regulation words but weakly."
+  }
+ ],
+ "L8.N7578": [
+  {
+   "layer": 8,
+   "neuron": 7578,
+   "pole": 1,
+   "fires": "nature's wrath, divine and heavenly forces in text",
+   "fires_conf": 0.20000000298023224,
+   "writes": "animal and creature words: animals, humans, species, fauna",
+   "writes_conf": 0.30000001192092896,
+   "note": "Top contexts about wrath and God are weak; out·R lists general hedges like perhaps, possibly and people. Low confidence."
+  },
+  {
+   "layer": 8,
+   "neuron": 7578,
+   "pole": -1,
+   "fires": "cute animals and pets: adorable, puppies, kittens, cozy",
+   "fires_conf": 0.30000001192092896,
+   "writes": "cute pets, kittens and puppies: adorable, yummy, cozy",
+   "writes_conf": 0.5,
+   "note": "Output list has kitten, puppy, cozy, adorable clearly; input contexts (stories about animals) support a weaker fires read."
+  }
+ ],
+ "L9.N1735": [
+  {
+   "layer": 9,
+   "neuron": 1735,
+   "pole": 1,
+   "fires": "escape and freedom words: escape, freedom, prison, free, 逃跑",
+   "fires_conf": 0.75,
+   "writes": "escape, prisoner and freedom words (逃脱, 囚, 自由, jailed)",
+   "writes_conf": 0.75,
+   "note": "Input, output and shared tokens (escape, freedom, imprison, 逃, 监狱) all agree; contexts peak on escape/free tokens."
+  },
+  {
+   "layer": 9,
+   "neuron": 1735,
+   "pole": -1,
+   "fires": "animals and birds: birds, wildlife, animals, vultures",
+   "fires_conf": 0.699999988079071,
+   "writes": "bird and animal words; feeding and eating behaviour",
+   "writes_conf": 0.5,
+   "note": "Input and shared tokens (bird, 啄, 鸟类, animals) agree; contexts peak on vulture/eagle/toucan tokens."
+  }
+ ],
+ "L9.N4778": [
+  {
+   "layer": 9,
+   "neuron": 4778,
+   "pole": 1,
+   "fires": "Runs of newline tokens (⏎⏎) in text and code",
+   "fires_conf": 0.6000000238418579,
+   "writes": "Retrospective history words: hindsight, legacy, archives, decade",
+   "writes_conf": 0.25,
+   "note": "Input is strongly newline runs; output is a weak historical-retrospective theme."
+  },
+  {
+   "layer": 9,
+   "neuron": 4778,
+   "pole": -1,
+   "fires": "Animal, pet, and zoo words (animals, 动物, 宠物, 兔子)",
+   "fires_conf": 0.8500000238418579,
+   "writes": "Animals, pets, zoos, and breeding: animals, species, 动物",
+   "writes_conf": 0.8500000238418579,
+   "note": "Input and output share animal, pet, zoo, breed, feed, and 动物; both reads agree strongly."
+  }
+ ],
+ "L9.N5386": [
+  {
+   "layer": 9,
+   "neuron": 5386,
+   "pole": 1,
+   "fires": "Animal species and birds: bird, species, fauna, wildlife",
+   "fires_conf": 0.699999988079071,
+   "writes": "Animal species, birds, insects and wildlife",
+   "writes_conf": 0.75,
+   "note": "Output reads are a strong animal and species theme, with 'species' shared on input and output. Contexts are bird and falcon taxonomy text."
+  },
+  {
+   "layer": 9,
+   "neuron": 5386,
+   "pole": -1,
+   "fires": "Biology and plant terms: 植物, 动物, 生物, species, breeding",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Construction, architecture and political terms (weak)",
+   "writes_conf": 0.15000000596046448,
+   "note": "Input reads are biology and plant terms at 12th percentile. Output reads are scattered architecture and politics words, so the write is weak."
+  }
+ ],
+ "L9.N10511": [
+  {
+   "layer": 9,
+   "neuron": 10511,
+   "pole": 1,
+   "fires": "birds, bats, and flying animals (bird, pigeon, flight, wings)",
+   "fires_conf": 0.8500000238418579,
+   "writes": "birds, insects and flying animals (birds, wings, butterflies, bats)",
+   "writes_conf": 0.8500000238418579,
+   "note": "Input and output both name birds, bats, butterflies and flight; contexts show bats, pigeons, swallows, starlings."
+  },
+  {
+   "layer": 9,
+   "neuron": 10511,
+   "pole": -1,
+   "fires": "children, babies and toddlers (kids, infant, nanny)",
+   "fires_conf": 0.4000000059604645,
+   "writes": "institutional and systemic reform words (system, crisis, organizations)",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R lists child words clearly; contexts are noisy (legs, animal friends), output read is weak and abstract."
+  }
+ ],
+ "L9.N11219": [
+  {
+   "layer": 9,
+   "neuron": 11219,
+   "pole": 1,
+   "fires": "phrases like 'I know,' before a parenthetical aside",
+   "fires_conf": 0.30000001192092896,
+   "writes": "database, Excel and layout software tokens",
+   "writes_conf": 0.20000000298023224,
+   "note": "Contexts show 'I know,' fires; output is Excel and DLL style tokens, weakly supported."
+  },
+  {
+   "layer": 9,
+   "neuron": 11219,
+   "pole": -1,
+   "fires": "animal and wildlife words: birds, species, mating, zoo",
+   "fires_conf": 0.8500000238418579,
+   "writes": "animal species, wildlife, mating and breeding words",
+   "writes_conf": 0.8500000238418579,
+   "note": "Input and output share animal, bird, mating, predator, species, zoo; contexts on bird throats and mating season."
+  }
+ ],
+ "L9.N12184": [
+  {
+   "layer": 9,
+   "neuron": 12184,
+   "pole": 1,
+   "fires": "Sentence-end newline tokens in web/article titles and section headers",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Casual filler words (yeah, kinda, pretty, freaking, stuff)",
+   "writes_conf": 0.20000000298023224,
+   "note": "Weak, diffuse contexts with newlines and a 'sort' shared token; input read is code/formatting words."
+  },
+  {
+   "layer": 9,
+   "neuron": 12184,
+   "pole": -1,
+   "fires": "Code and text-processing terms (字符串, 文本, 表格, 程序员)",
+   "fires_conf": 0.15000000596046448,
+   "writes": "British spelling words (honour, colour, centre, litre)",
+   "writes_conf": 0.25,
+   "note": "Output list strongly British-spelling; input is code and text terms. Activation is very rare, low confidence."
+  }
+ ],
+ "L10.N2442": [
+  {
+   "layer": 10,
+   "neuron": 2442,
+   "pole": 1,
+   "fires": "Animals, wildlife, species and conservation topics",
+   "fires_conf": 0.800000011920929,
+   "writes": "Species, wildlife, biodiversity and ecology words",
+   "writes_conf": 0.8500000238418579,
+   "note": "Many shared tokens across input and output (species, fauna, habitat, ecology) and fitting top contexts."
+  },
+  {
+   "layer": 10,
+   "neuron": 2442,
+   "pole": -1,
+   "fires": "Groups of people such as children, girls, society, ships",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Corporate finance, business executives and payroll",
+   "writes_conf": 0.44999998807907104,
+   "note": "Output read is clearly business and finance; firing contexts are diffuse people nouns."
+  }
+ ],
+ "L10.N7820": [
+  {
+   "layer": 10,
+   "neuron": 7820,
+   "pole": 1,
+   "fires": "animal species, wildlife, and animal sounds/calls",
+   "fires_conf": 0.6000000238418579,
+   "writes": "animal, species, fauna and wildlife-study words (audio, mating, fungi)",
+   "writes_conf": 0.44999998807907104,
+   "note": "in·R lists Species, 鸟类, wildlife, fauna, 动物; top contexts show animal calls and mating. Output side is noisier (filming, audio, specimen) but shares fauna/species/audio."
+  },
+  {
+   "layer": 10,
+   "neuron": 7820,
+   "pole": -1,
+   "fires": "bird migration and animal movement, plus answer/reply and email terms",
+   "fires_conf": 0.4000000059604645,
+   "writes": "shipping, sailing, travel and link/address words",
+   "writes_conf": 0.30000001192092896,
+   "note": "Top contexts are clearly migration and birds; in·R covers 迁移, 鸟类, 答案, email, 链接. Output read (海运, 航行, 快递) is only weakly tied."
+  }
+ ],
+ "L10.N10486": [
+  {
+   "layer": 10,
+   "neuron": 10486,
+   "pole": 1,
+   "fires": "Targaryen and Game of Thrones names; fantasy games",
+   "fires_conf": 0.3499999940395355,
+   "writes": "fantasy games and fantasy-war terms: Skyrim, Warcraft, Goblin, armour",
+   "writes_conf": 0.6000000238418579,
+   "note": "Output and input share armour, goblin, dungeon, Minecraft, Warcraft, gameplay; contexts show Targaryen and Thrones names."
+  },
+  {
+   "layer": 10,
+   "neuron": 10486,
+   "pole": -1,
+   "fires": "adjectives and adverbs: wonderful, fabulous, beautiful, GOOGLE",
+   "fires_conf": 0.11999999731779099,
+   "writes": "academic adjectives: entrepreneurial, globalization, characterized, instrumental",
+   "writes_conf": 0.20000000298023224,
+   "note": "Output reads are generic academic and adverbial tokens; input reads are a loose mix, low confidence."
+  }
+ ],
+ "L10.N10494": [
+  {
+   "layer": 10,
+   "neuron": 10494,
+   "pole": 1,
+   "fires": "asterisk-prefixed tokens and multiplication pointer syntax (*r, *n)",
+   "fires_conf": 0.30000001192092896,
+   "writes": "exclamation marks and emphatic punctuation (!!!, ????)",
+   "writes_conf": 0.44999998807907104,
+   "note": "in·R is asterisk tokens; out·R is exclamation and question marks plus caps abbreviations. Contexts show 'utils', 'main' tokens in code imports."
+  },
+  {
+   "layer": 10,
+   "neuron": 10494,
+   "pole": -1,
+   "fires": "poetry, prose, and literary-style words (poetry, lyrical, fragile)",
+   "fires_conf": 0.4000000059604645,
+   "writes": "profanity and poetic/literary-style words (fuck, poetry, queer)",
+   "writes_conf": 0.4000000059604645,
+   "note": "in·R and out·R both list poetry, poets, prose, fuck, queer; shared tokens include fuck, ephem, lyric, poem, poet. Top contexts are personal-essay narrative pronouns like They, We."
+  }
+ ],
+ "L10.N10730": [
+  {
+   "layer": 10,
+   "neuron": 10730,
+   "pole": 1,
+   "fires": "animal and rodent nouns (mice, rats, animals, mammals, pets)",
+   "fires_conf": 0.6000000238418579,
+   "writes": "animal and rodent words: mice, rodents, mammals, species, pets",
+   "writes_conf": 0.6000000238418579,
+   "note": "in·R and out·R both center on animals/rodents; top contexts show mice, rodents, mammal names; shared tokens mice, mammal, veterinary, rodent."
+  },
+  {
+   "layer": 10,
+   "neuron": 10730,
+   "pole": -1,
+   "fires": "dental caries and tooth/animal-name fragments; weak, diffuse",
+   "fires_conf": 0.15000000596046448,
+   "writes": "photography, beach and sunglasses lifestyle words",
+   "writes_conf": 0.15000000596046448,
+   "note": "Out reads at 44th percentile with a leisure/photo theme; in reads (animals, species, zoo) are the opposite of the + pole; low confidence."
+  }
+ ],
+ "L10.N11500": [
+  {
+   "layer": 10,
+   "neuron": 11500,
+   "pole": 1,
+   "fires": "animal and species nouns, biology and wildlife context",
+   "fires_conf": 0.550000011920929,
+   "writes": "authentic/authorization and Arabic-Chinese proper-noun words; weak theme",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R clearly lists animal/species/ecology words; out·R is a mixed, low-strength list (authentication, Arabic, Chinese names), so writes is a low-confidence guess."
+  },
+  {
+   "layer": 10,
+   "neuron": 11500,
+   "pole": -1,
+   "fires": "ecology and species words: wildlife, habitat, population, genetics",
+   "fires_conf": 0.5,
+   "writes": "reproduction, sex, and biology words like population, pollen, species",
+   "writes_conf": 0.4000000059604645,
+   "note": "Shared input/output tokens (species, wildlife, habitat, pollen, population) support an ecology/biology theme; contexts show habitat corridor and inbreeding."
+  }
+ ],
+ "L11.N2807": [
+  {
+   "layer": 11,
+   "neuron": 2807,
+   "pole": 1,
+   "fires": "Buddhism, Indian religion, yoga and meditation",
+   "fires_conf": 0.699999988079071,
+   "writes": "Buddhist terms: Buddha, dharma, meditation, monks",
+   "writes_conf": 0.75,
+   "note": "Strong shared tokens (buddha, buddhist, guru, yoga, lama) and out·R dominated by Buddhist vocabulary."
+  },
+  {
+   "layer": 11,
+   "neuron": 2807,
+   "pole": -1,
+   "fires": "South Asian and Asian nations and peoples",
+   "fires_conf": 0.3499999940395355,
+   "writes": "American politics, Congress and sports",
+   "writes_conf": 0.30000001192092896,
+   "note": "in·R has nation and ethnic names; out·R is American politics and sports, with no shared tokens."
+  }
+ ],
+ "L11.N5001": [
+  {
+   "layer": 11,
+   "neuron": 5001,
+   "pole": 1,
+   "fires": "name fragments inside character names and song/poem words",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Southeast Asian nations, emperors and kings, question-mark breaks",
+   "writes_conf": 0.20000000298023224,
+   "note": "Fire contexts are mid-word in names (Hester Pryne, Elvira); the write read is a loose royalty/nations theme."
+  },
+  {
+   "layer": 11,
+   "neuron": 5001,
+   "pole": -1,
+   "fires": "inside Chinese novel titles and literary-work names",
+   "fires_conf": 0.30000001192092896,
+   "writes": "novel and literary terms: protagonist, heroine, proletariat, bourgeois",
+   "writes_conf": 0.4000000059604645,
+   "note": "Peaks fall inside titles like 子夜 and 父与子; out·R lists literary/social-class vocabulary, with financ and ideological shared."
+  }
+ ],
+ "L11.N5415": [
+  {
+   "layer": 11,
+   "neuron": 5415,
+   "pole": 1,
+   "fires": "Painting, drawing, and zoo/biology words (画, 树, animals)",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Bridges, routes, passports and travel/transport terms",
+   "writes_conf": 0.25,
+   "note": "Input read is painting and animals; output read is transport and bridges; contexts are Euler graphs and biology."
+  },
+  {
+   "layer": 11,
+   "neuron": 5415,
+   "pole": -1,
+   "fires": "Animal and pet words: animals, pets, hunters, prey, wildlife",
+   "fires_conf": 0.6000000238418579,
+   "writes": "Hunting, predators, claws and prey",
+   "writes_conf": 0.699999988079071,
+   "note": "Shared hunt, prey, predator, claw, raptor tokens on both sides; contexts about eagles and hunting."
+  }
+ ],
+ "L11.N5731": [
+  {
+   "layer": 11,
+   "neuron": 5731,
+   "pole": 1,
+   "fires": "British/Commonwealth spellings and UK terms (-ise, licence, colours, UK)",
+   "fires_conf": 0.5,
+   "writes": "US cities, states and US-specific names (Hawaii, Seattle, NYC)",
+   "writes_conf": 0.25,
+   "note": "in·R clearly lists British -ise/-our spellings; out·R is US place names, a weaker and different theme; shared 'flavor' is thin."
+  },
+  {
+   "layer": 11,
+   "neuron": 5731,
+   "pole": -1,
+   "fires": "British spellings and UK/EU terms (authorised, euro, neighbour, ITV)",
+   "fires_conf": 0.5,
+   "writes": "British -ise/-our spelling forms (authorised, organised, colours)",
+   "writes_conf": 0.44999998807907104,
+   "note": "Shared tokens cover many British -ise/-our stems and euro/itv, so the spelling and UK theme holds on both sides."
+  }
+ ],
+ "L11.N8529": [
+  {
+   "layer": 11,
+   "neuron": 8529,
+   "pole": 1,
+   "fires": "Body parts like fingers, toes, teeth, nails and eyes",
+   "fires_conf": 0.5,
+   "writes": "Measurement words: height, length, width in code and tests",
+   "writes_conf": 0.20000000298023224,
+   "note": "Shared tokens nipple, 指甲, 牙齿, 脚 support body parts; contexts show fingers and toes."
+  },
+  {
+   "layer": 11,
+   "neuron": 8529,
+   "pole": -1,
+   "fires": "Award and prize words: award, winner, medal, nominated, chosen",
+   "fires_conf": 0.8500000238418579,
+   "writes": "Award, nominee and prize words, honour terms",
+   "writes_conf": 0.800000011920929,
+   "note": "Input, output and shared tokens strongly agree on awards; contexts show 'Player of the Year'."
+  }
+ ],
+ "L11.N8894": [
+  {
+   "layer": 11,
+   "neuron": 8894,
+   "pole": 1,
+   "fires": "Chinese 'inside city' and 'file'/'uid' tokens; mixed code and locale",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Globalization, climate change and competition words (全球化, 竞争, Global)",
+   "writes_conf": 0.25,
+   "note": "Out·R at 88th percentile lists globalization and competition; fires contexts are weak and diverse."
+  },
+  {
+   "layer": 11,
+   "neuron": 8894,
+   "pole": -1,
+   "fires": "Inner/internal and 'colony', 'hive', 'school' as containment nouns",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Internal/internally/entire: words meaning inside or whole",
+   "writes_conf": 0.3499999940395355,
+   "note": "Shared tokens internal, internally, external, 内部, 本身; contexts about colonies and hives reflect internal-contained nouns."
+  }
+ ],
+ "L11.N10750": [
+  {
+   "layer": 11,
+   "neuron": 10750,
+   "pole": 1,
+   "fires": "code/markup line-end tokens and closing brackets before newlines",
+   "fires_conf": 0.30000001192092896,
+   "writes": "technical and product jargon (tech, hardware, software terms)",
+   "writes_conf": 0.20000000298023224,
+   "note": "in·R is dominated by newline-plus-bracket tokens; out·R is a weak mixed tech/finance list at low strength; top contexts are scattered named entities, so weak."
+  },
+  {
+   "layer": 11,
+   "neuron": 10750,
+   "pole": -1,
+   "fires": "mid-word or name fragments inside code and identifiers (e.g. 'Heps|ia', 'Rebek|ah')",
+   "fires_conf": 0.20000000298023224,
+   "writes": "abstract verbs and mental-state words (suddenly, hoped, remained, realised)",
+   "writes_conf": 0.20000000298023224,
+   "note": "Weak, low-strength reads; out·R lists emotional/narrative verbs but the input side is Chinese analysis/explanation words; little agreement."
+  }
+ ],
+ "L12.N6303": [
+  {
+   "layer": 12,
+   "neuron": 6303,
+   "pole": 1,
+   "fires": "Closing quote-and-brace sequences ending code or quoted strings",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Demonstratives and sentence-start determiners (这边, 这次, 这个)",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·R is quote/brace endings. Contexts are scattered (Theory, powers, year digits), so fires is weak; the output read is low-percentile noise."
+  },
+  {
+   "layer": 12,
+   "neuron": 6303,
+   "pole": -1,
+   "fires": "Profanity and crude casual slang: fucking, shit, hilarious, idiot",
+   "fires_conf": 0.5,
+   "writes": "Emoticons and crude slang like ;-), (!, WTF, cute",
+   "writes_conf": 0.4000000059604645,
+   "note": "Input is strongly profanity and casual humour. Output shows emoticon-style '(' and ';-)' tokens plus WTF, supported by shared ;-) and wtf."
+  }
+ ],
+ "L12.N8598": [
+  {
+   "layer": 12,
+   "neuron": 8598,
+   "pole": 1,
+   "fires": "speech and meeting words: today, tonight, present, attendees",
+   "fires_conf": 0.5,
+   "writes": "event speaker and attendee words: speaker, attendees, here, tonight",
+   "writes_conf": 0.6000000238418579,
+   "note": "Shared tokens tonight, 出席, 参会, 主持人 and 掌声 link input and output; contexts show 'here' and 'reading'."
+  },
+  {
+   "layer": 12,
+   "neuron": 8598,
+   "pole": -1,
+   "fires": "ellipsis and quotation marks at the end of an utterance",
+   "fires_conf": 0.30000001192092896,
+   "writes": "ellipsis tokens '…' and trailing quote marks",
+   "writes_conf": 0.30000001192092896,
+   "note": "out·R lists ellipsis variants; shared quote token; contexts with 'here' and 'watched' are loose."
+  }
+ ],
+ "L13.N6354": [
+  {
+   "layer": 13,
+   "neuron": 6354,
+   "pole": 1,
+   "fires": "rural land use: farming, livestock, hunting, forestry, wildlife habitat",
+   "fires_conf": 0.6000000238418579,
+   "writes": "food and cooking items (sugar, desserts, sushi, kitchen)",
+   "writes_conf": 0.30000001192092896,
+   "note": "in·R z strongly lists agriculture, herding and hunting terms; output lists food and kitchen words, a less certain match."
+  },
+  {
+   "layer": 13,
+   "neuron": 6354,
+   "pole": -1,
+   "fires": "wolves, wild predators and wilderness animals (wolf, cougar, raptor, ranch)",
+   "fires_conf": 0.550000011920929,
+   "writes": "wolves, ranching, hunters and rural frontier words",
+   "writes_conf": 0.5,
+   "note": "Shared input and output tokens (wolf, cougar, ranch, predator) and contexts all agree on wolves and wild rural life."
+  }
+ ],
+ "L13.N9700": [
+  {
+   "layer": 13,
+   "neuron": 9700,
+   "pole": 1,
+   "fires": "nature, environment and ecology words: wildlife, weather, rivers, vegetation, species",
+   "fires_conf": 0.5,
+   "writes": "unclear; weak out read of mixed legal/medical/academic tokens",
+   "writes_conf": 0.10000000149011612,
+   "note": "Input read at 86th pct names nature/ecology/weather tokens in Chinese and English; contexts (fish, birds, trees, climate, energy) agree. Output read is noise."
+  },
+  {
+   "layer": 13,
+   "neuron": 9700,
+   "pole": -1,
+   "fires": "season and farming/nature words: autumn, season, agriculture, fauna, flora",
+   "fires_conf": 0.4000000059604645,
+   "writes": "nature and farming words: wildlife, vegetation, seasons, farming, climate",
+   "writes_conf": 0.5,
+   "note": "Shared input/output tokens (autumn, farm, fauna, flora, harvest, season, vegetation) support a season-and-nature theme; contexts are mostly unrelated nouns, so fire label is weaker."
+  }
+ ],
+ "L13.N10248": [
+  {
+   "layer": 13,
+   "neuron": 10248,
+   "pole": 1,
+   "fires": "hearing, audio, and blindness/sound words",
+   "fires_conf": 0.800000011920929,
+   "writes": "audio, listening and hearing-impaired terms",
+   "writes_conf": 0.8500000238418579,
+   "note": "Shared input and output tokens (audio, blind, deaf, listen, sensory); contexts on blind and accessibility."
+  },
+  {
+   "layer": 13,
+   "neuron": 10248,
+   "pole": -1,
+   "fires": "mixed words about money, price and deals",
+   "fires_conf": 0.10000000149011612,
+   "writes": "photo and picture-gallery terms (photos, pictures, gallery)",
+   "writes_conf": 0.25,
+   "note": "Output lists photos, gallery, pictures; fire contexts are cherry and peach food words, weakly matching."
+  }
+ ],
+ "L13.N10924": [
+  {
+   "layer": 13,
+   "neuron": 10924,
+   "pole": 1,
+   "fires": "Slashes and path separators in URLs and Django imports",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Government, consumer and national-policy words",
+   "writes_conf": 0.25,
+   "note": "Contexts show slashes and 'method' in Django code; out·R lists nation, government and consumer terms."
+  },
+  {
+   "layer": 13,
+   "neuron": 10924,
+   "pole": -1,
+   "fires": "Mid-token inside names of animals, people, and books",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Ongoing daily and long-term living words: daily, lifelong, neighbors",
+   "writes_conf": 0.3499999940395355,
+   "note": "Shared tokens (daily, neighbor, camera, 每天, 日记, 研究生) support a daily-life or long-duration theme."
+  }
+ ],
+ "L14.N6211": [
+  {
+   "layer": 14,
+   "neuron": 6211,
+   "pole": 1,
+   "fires": "Aliens, other worlds and imagined other civilizations (Flatland, alien life)",
+   "fires_conf": 0.699999988079071,
+   "writes": "Aliens, extraterrestrials, humans and foreigners as 'the other'",
+   "writes_conf": 0.6499999761581421,
+   "note": "alien and civilization are shared by input and output; out·R lists aliens, foreigners, astronomers, Earth."
+  },
+  {
+   "layer": 14,
+   "neuron": 6211,
+   "pole": -1,
+   "fires": "Childhood, growing up and age stages (child, infant, adult)",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Unclear; business and dealer nouns in out·R",
+   "writes_conf": 0.10000000149011612,
+   "note": "Input reads show child and age terms, but the contexts are mixed and the output has no coherent theme."
+  }
+ ],
+ "L14.N12132": [
+  {
+   "layer": 14,
+   "neuron": 12132,
+   "pole": 1,
+   "fires": "Plants, trees, outdoor and garden objects (wooded, foliage, birds, flowers)",
+   "fires_conf": 0.3499999940395355,
+   "writes": "Outdoor/garden and decorative items: wooden, waterproof, vegetable, decoration",
+   "writes_conf": 0.3499999940395355,
+   "note": "Input and output share animal, bush, flower, outdoor, bath, ornament; contexts show trees and birds."
+  },
+  {
+   "layer": 14,
+   "neuron": 12132,
+   "pole": -1,
+   "fires": "Weather and season words (hot, cold, winter, summer, dust)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Academic and professional roles: professor, academic, mentors, policymakers",
+   "writes_conf": 0.25,
+   "note": "Input read weak; out·R clearly academic-institutional, shared token only professor."
+  }
+ ],
+ "L15.N7239": [
+  {
+   "layer": 15,
+   "neuron": 7239,
+   "pole": 1,
+   "fires": "first-person 'I' or 'my' in personal anecdotes",
+   "fires_conf": 0.4000000059604645,
+   "writes": "emphatic caps and exclamations: !!!, NOT, VERY, ONLY",
+   "writes_conf": 0.4000000059604645,
+   "note": "Contexts are first-person statements; output side is emphatic caps and exclamation marks."
+  },
+  {
+   "layer": 15,
+   "neuron": 7239,
+   "pole": -1,
+   "fires": "first-person subject pronouns 'I' or 'We' starting a clause",
+   "fires_conf": 0.30000001192092896,
+   "writes": "em-dash plus pronoun, as in '—you', '—we'",
+   "writes_conf": 0.20000000298023224,
+   "note": "Top contexts show I/We at clause starts; output reads are weak and mixed."
+  }
+ ],
+ "L16.N314": [
+  {
+   "layer": 16,
+   "neuron": 314,
+   "pole": 1,
+   "fires": "unclear; code-like tokens and numbers in code or numeric ranges",
+   "fires_conf": 0.10000000149011612,
+   "writes": "academic formal adverbs: universally, traditionally, indeed, meticulous",
+   "writes_conf": 0.20000000298023224,
+   "note": "out·R lists formal and academic register words; input contexts are mixed and numeric."
+  },
+  {
+   "layer": 16,
+   "neuron": 314,
+   "pole": -1,
+   "fires": "unclear; scattered technical and academic tokens",
+   "fires_conf": 0.10000000149011612,
+   "writes": "scanning, scanner and affiliate-style words (scan, scanned, contacts)",
+   "writes_conf": 0.20000000298023224,
+   "note": "out·R has scan/registration words; input reads are scattered and weak."
+  }
+ ],
+ "L16.N1229": [
+  {
+   "layer": 16,
+   "neuron": 1229,
+   "pole": 1,
+   "fires": "British spellings and UK terms (centre, colour, Whilst, Yorkshire, 英国)",
+   "fires_conf": 0.800000011920929,
+   "writes": "British -our and -ise spellings (colour, favour, centre)",
+   "writes_conf": 0.800000011920929,
+   "note": "in·R and out·R both list British spellings (colour, centre, recognised, organised, favourite). Strong shared evidence."
+  },
+  {
+   "layer": 16,
+   "neuron": 1229,
+   "pole": -1,
+   "fires": "UK and British institutional names (BBC, NHS, Britain, London)",
+   "fires_conf": 0.5,
+   "writes": "suppresses British spellings; promotes non-UK spelling",
+   "writes_conf": 0.4000000059604645,
+   "note": "Input names UK terms; output is the same British spellings as the + pole, so this pole's write likely reverses them. Moderate confidence."
+  }
+ ],
+ "L16.N1515": [
+  {
+   "layer": 16,
+   "neuron": 1515,
+   "pole": 1,
+   "fires": "Requests for simple language aimed at children or laymen",
+   "fires_conf": 0.699999988079071,
+   "writes": "Simple, easy-to-understand wording for kids and laypeople",
+   "writes_conf": 0.699999988079071,
+   "note": "Input and output share simple, children, kids, easy; top contexts are 'simple language' and 'layman's terms'."
+  },
+  {
+   "layer": 16,
+   "neuron": 1515,
+   "pole": -1,
+   "fires": "Formal sophisticated vocabulary such as anticipate and synergy",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Academic and technical jargon like synchronous, leveraging, predictive",
+   "writes_conf": 0.20000000298023224,
+   "note": "Output lists formal technical jargon; input is mixed, low confidence."
+  }
+ ],
+ "L16.N8347": [
+  {
+   "layer": 16,
+   "neuron": 8347,
+   "pole": 1,
+   "fires": "unclear; ellipsis and dash-run tokens, plus Nobel/win-related words",
+   "fires_conf": 0.15000000596046448,
+   "writes": "unclear; generic function words and technical nouns",
+   "writes_conf": 0.10000000149011612,
+   "note": "Input reads are noisy; output read at 0th percentile with no theme."
+  },
+  {
+   "layer": 16,
+   "neuron": 8347,
+   "pole": -1,
+   "fires": "unclear; ellipsis and sentence-middle function words",
+   "fires_conf": 0.15000000596046448,
+   "writes": "unclear; generic conjunction and preposition words",
+   "writes_conf": 0.15000000596046448,
+   "note": "Weak reads; out·R lists common function words with no clear concept."
+  }
+ ],
+ "L16.N11152": [
+  {
+   "layer": 16,
+   "neuron": 11152,
+   "pole": 1,
+   "fires": "digits in phone numbers, like 1-800 vanity numbers",
+   "fires_conf": 0.44999998807907104,
+   "writes": "short lowercase fragments and punctuation suffixes",
+   "writes_conf": 0.15000000596046448,
+   "note": "Top contexts are all inside 800-number vanity phone numbers; output reads are generic and weak."
+  },
+  {
+   "layer": 16,
+   "neuron": 11152,
+   "pole": -1,
+   "fires": "word fragments inside identifiers and names, like 'Bejan'",
+   "fires_conf": 0.11999999731779099,
+   "writes": "unclear; enumerating alternatives like 'can' and 'or'",
+   "writes_conf": 0.10000000149011612,
+   "note": "Contexts are scattered mid-word splits; the read is weak and not consistent."
+  }
+ ],
+ "L18.N1410": [
+  {
+   "layer": 18,
+   "neuron": 1410,
+   "pole": 1,
+   "fires": "Nouns for a book, article or work being discussed",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Promotional and utility verbs: utilizing, showcasing, advancements, impactful",
+   "writes_conf": 0.30000001192092896,
+   "note": "Fires contexts are mostly 'book/article/pieces'. Output list is a loose promotional-utility theme; both weak."
+  },
+  {
+   "layer": 18,
+   "neuron": 1410,
+   "pole": -1,
+   "fires": "Em-dash punctuation (—) introducing an interjected clause or word",
+   "fires_conf": 0.5,
+   "writes": "Em-dash tokens (—) as the next punctuation",
+   "writes_conf": 0.6000000238418579,
+   "note": "Input and output lists are dominated by '—' and '–' variants on both sides, a shared direct signal."
+  }
+ ],
+ "L18.N7567": [
+  {
+   "layer": 18,
+   "neuron": 7567,
+   "pole": 1,
+   "fires": "Misunderstanding and mistake words: mislead, misconception, error",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Negation and absence: no, nothing, not exist, cannot, sorry",
+   "writes_conf": 0.699999988079071,
+   "note": "out·R at 93rd percentile is strongly 没有/nothing/不存在/无法; sorry is shared by input and output."
+  },
+  {
+   "layer": 18,
+   "neuron": 7567,
+   "pole": -1,
+   "fires": "Vague placeholders: anyway, nothing, anonymous, undefined",
+   "fires_conf": 0.11999999731779099,
+   "writes": "Scale and proportion: percentage, sizes, crucial, proportion",
+   "writes_conf": 0.10000000149011612,
+   "note": "Both poles are weak at layer 18; low-confidence guesses only."
+  }
+ ],
+ "L19.N4996": [
+  {
+   "layer": 19,
+   "neuron": 4996,
+   "pole": 1,
+   "fires": "profanity and crude slang in dialogue (damn, bitch, pissed)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "closing quote-period tokens after dialogue (.' and .\")",
+   "writes_conf": 0.30000001192092896,
+   "note": "Input lists profanity weakly; output is dominated by quote-period punctuation tokens."
+  },
+  {
+   "layer": 19,
+   "neuron": 4996,
+   "pole": -1,
+   "fires": "exclamation and emphatic dialogue, e.g. '!!!!' and 'really'",
+   "fires_conf": 0.20000000298023224,
+   "writes": "exclamation marks and intensifiers (really, absolutely, incredibly)",
+   "writes_conf": 0.44999998807907104,
+   "note": "Output lists exclamation runs and intensifiers; input is noisy."
+  }
+ ],
+ "L19.N5426": [
+  {
+   "layer": 19,
+   "neuron": 5426,
+   "pole": 1,
+   "fires": "words distinguishing real from fake or confused meanings (真假, 误解)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "praise and encouragement words: favor, encourage, know, push",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R about confusion/ambiguity; out·R weakly lists encourage/favorite; contexts are mixed."
+  },
+  {
+   "layer": 19,
+   "neuron": 5426,
+   "pole": -1,
+   "fires": "questions about word meaning or definition (含义, literal, 意思)",
+   "fires_conf": 0.5,
+   "writes": "meaning and misunderstanding words: meaning, misunderstood, 含义, 误解",
+   "writes_conf": 0.5,
+   "note": "in·R and out·R both list meaning/literal/abbreviation/noun; contexts show '指的是' and 'where' meaning-explanation."
+  }
+ ],
+ "L19.N6265": [
+  {
+   "layer": 19,
+   "neuron": 6265,
+   "pole": 1,
+   "fires": "hedging and vague adverbs: probably, perhaps, maybe, ostensibly",
+   "fires_conf": 0.4000000059604645,
+   "writes": "hedges and qualifiers: perhaps, probably, apparently, presumably",
+   "writes_conf": 0.4000000059604645,
+   "note": "Shared tokens about, apparent, probab, perhap, ostensib, ought; contexts show hedged phrasing."
+  },
+  {
+   "layer": 19,
+   "neuron": 6265,
+   "pole": -1,
+   "fires": "unclear; informal code comparisons and 'estimate' markers",
+   "fires_conf": 0.10000000149011612,
+   "writes": "trendy formal buzzwords: utilize, showcase, additionally, undoubtedly",
+   "writes_conf": 0.30000001192092896,
+   "note": "Out·R lists utilize, showcasing, additionally, Whilst; input signal weak."
+  }
+ ],
+ "L19.N8621": [
+  {
+   "layer": 19,
+   "neuron": 8621,
+   "pole": 1,
+   "fires": "Mid-word or mid-identifier tokens in code and text, e.g. 'Debug', 'compatibility', 'Log'",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Adverbs of certainty and degree: obviously, especially, certainly, probably",
+   "writes_conf": 0.5,
+   "note": "out·R clearly lists adverbs like especially/particularly/certainly; input contexts are scattered code tokens."
+  },
+  {
+   "layer": 19,
+   "neuron": 8621,
+   "pole": -1,
+   "fires": "Unclear: scattered tokens in code, lists and Chinese medical-register text",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Plural nouns and generic 'things' like behaviours, options, structures",
+   "writes_conf": 0.20000000298023224,
+   "note": "out·S z lists plural nouns; out·R has weak Chinese 'or/accomplish' items; low confidence."
+  }
+ ],
+ "L20.N7848": [
+  {
+   "layer": 20,
+   "neuron": 7848,
+   "pole": 1,
+   "fires": "literary atmosphere words: quietly, whispers, echoes, shimmer",
+   "fires_conf": 0.30000001192092896,
+   "writes": "silence and night imagery (沉默, 深夜, quiet, whispers)",
+   "writes_conf": 0.3499999940395355,
+   "note": "Shared quiet, whisper, ghost, shimmer; contexts show dashes and poetic prose."
+  },
+  {
+   "layer": 20,
+   "neuron": 7848,
+   "pole": -1,
+   "fires": "emphatic exclamation and '!!!' punctuation",
+   "fires_conf": 0.30000001192092896,
+   "writes": "exclamation and question marks, 'utilize' words",
+   "writes_conf": 0.3499999940395355,
+   "note": "Output is strongly punctuation (!!!, ???), input is weaker."
+  }
+ ],
+ "L21.N8707": [
+  {
+   "layer": 21,
+   "neuron": 8707,
+   "pole": 1,
+   "fires": "Asking what a term or word means: term, meaning, unfamiliar",
+   "fires_conf": 0.8999999761581421,
+   "writes": "Definition, term, terminology and meaning words",
+   "writes_conf": 0.8999999761581421,
+   "note": "Input and output both strongly name terms, definitions and meaning; shared tokens (term, definition, abbrev, vocab) confirm it."
+  },
+  {
+   "layer": 21,
+   "neuron": 8707,
+   "pole": -1,
+   "fires": "Explanation requests and confusion: 懵, tutorial, explanation",
+   "fires_conf": 0.30000001192092896,
+   "writes": "No clear write; weak technical and dataset words",
+   "writes_conf": 0.15000000596046448,
+   "note": "Input read is a loose explanation/confusion theme; output is at the 8th percentile, so the write label is weak."
+  }
+ ],
+ "L22.N4338": [
+  {
+   "layer": 22,
+   "neuron": 4338,
+   "pole": 1,
+   "fires": "night, evening and nighttime words",
+   "fires_conf": 0.8999999761581421,
+   "writes": "night, evening, dusk and lighting words",
+   "writes_conf": 0.8999999761581421,
+   "note": "Strong agreement across in·R, in·S and out·R on night/夜/dinner/dusk/lights."
+  },
+  {
+   "layer": 22,
+   "neuron": 4338,
+   "pole": -1,
+   "fires": "sleep and nighttime-rest words, insomnia",
+   "fires_conf": 0.3499999940395355,
+   "writes": "morning, daytime and sunshine words",
+   "writes_conf": 0.5,
+   "note": "Input shows night/sleep words; output lists morning, lunch, sun, spring — opposite time-of-day pole."
+  }
+ ],
+ "L22.N4409": [
+  {
+   "layer": 22,
+   "neuron": 4409,
+   "pole": 1,
+   "fires": "'Same', 'another', 'similarly', 'likewise' words in in·R",
+   "fires_conf": 0.800000011920929,
+   "writes": "Similarly, likewise, same and another (also, too)",
+   "writes_conf": 0.8999999761581421,
+   "note": "in·R and out·R both list same, another, similarly, likewise, equally, 同样 across English and Chinese. Strong shared set."
+  },
+  {
+   "layer": 22,
+   "neuron": 4409,
+   "pole": -1,
+   "fires": "Second repetition in 'X by X' or 'X after X' phrases",
+   "fires_conf": 0.3499999940395355,
+   "writes": "Ellipsis and blank-line padding",
+   "writes_conf": 0.15000000596046448,
+   "note": "All contexts peak on the token after 'nano-second by', 'state after', 'plop after', 'email after'. Writes read is weak."
+  }
+ ],
+ "L22.N4566": [
+  {
+   "layer": 22,
+   "neuron": 4566,
+   "pole": 1,
+   "fires": "'There was/were/are' and sentence-opening adverbs before a predicate",
+   "fires_conf": 0.3499999940395355,
+   "writes": "Em-dash before a continuing clause",
+   "writes_conf": 0.4000000059604645,
+   "note": "Peaks on 'There were/are'; out·R is dominated by em-dash tokens, a consistent signal."
+  },
+  {
+   "layer": 22,
+   "neuron": 4566,
+   "pole": -1,
+   "fires": "Sentence-opening adverbs and qualifiers (sizable, handful, even)",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Chinese 把 and 不 construction words",
+   "writes_conf": 0.15000000596046448,
+   "note": "Contexts are scattered; both reads are weak and loosely supported."
+  }
+ ],
+ "L22.N10923": [
+  {
+   "layer": 22,
+   "neuron": 10923,
+   "pole": 1,
+   "fires": "intensifiers and adverbs before an adjective: very, quite, really, precisely",
+   "fires_conf": 0.30000001192092896,
+   "writes": "intensifiers and degree words: very, just, quite, much",
+   "writes_conf": 0.3499999940395355,
+   "note": "in·R and shared tokens (very, quite, just, much, whatever) agree on intensifiers; out·R percentile is very low."
+  },
+  {
+   "layer": 22,
+   "neuron": 10923,
+   "pole": -1,
+   "fires": "end of chat-assistant turn, start of assistant reply",
+   "fires_conf": 0.3499999940395355,
+   "writes": "unclear; code-like tokens such as ')' and '*)' (weak)",
+   "writes_conf": 0.15000000596046448,
+   "note": "Top contexts all sit at <|im_start|> boundaries; reads show code punctuation with no clear theme."
+  }
+ ],
+ "L22.N12037": [
+  {
+   "layer": 22,
+   "neuron": 12037,
+   "pole": 1,
+   "fires": "uncertain code characters and fragments in mixed code/text",
+   "fires_conf": 0.15000000596046448,
+   "writes": "quotation marks and curly quotes before speech",
+   "writes_conf": 0.20000000298023224,
+   "note": "Activations are scattered (brackets, letters, 'warranty or'); in·R and out·R reads are weak and mixed."
+  },
+  {
+   "layer": 22,
+   "neuron": 12037,
+   "pole": -1,
+   "fires": "ellipsis and repeated newlines at the end of a passage",
+   "fires_conf": 0.30000001192092896,
+   "writes": "ellipsis followed by newlines, trailing-off continuation",
+   "writes_conf": 0.5,
+   "note": "out·R is dominated by ...⏎⏎ and … tokens; the in·R list is weak."
+  }
+ ],
+ "L23.N135": [
+  {
+   "layer": 23,
+   "neuron": 135,
+   "pole": 1,
+   "fires": "Ellipsis markers '...' and following ellipsis-ended tokens",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Email/contact tokens: email, mail, key, Tyler",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R is strongly ellipsis; out·R is weak email-address tokens. Contexts are mixed (he, as, is)."
+  },
+  {
+   "layer": 23,
+   "neuron": 135,
+   "pole": -1,
+   "fires": "Chinese temporal and transitional words (当然, 后来, 现在, 以后)",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Transition words: then, 然后, 当然, 那时",
+   "writes_conf": 0.4000000059604645,
+   "note": "Fires on 后来/現在/以后 time and 當然 transitions; out·R lists 然后, then, 当然 matching."
+  }
+ ],
+ "L24.N8277": [
+  {
+   "layer": 24,
+   "neuron": 8277,
+   "pole": 1,
+   "fires": "unclear; mixed Chinese and code fragments",
+   "fires_conf": 0.10000000149011612,
+   "writes": "unclear; weak out side",
+   "writes_conf": 0.10000000149011612,
+   "note": "no coherent read on either side."
+  },
+  {
+   "layer": 24,
+   "neuron": 8277,
+   "pole": -1,
+   "fires": "safety and security nouns, 安全",
+   "fires_conf": 0.15000000596046448,
+   "writes": "no clear theme",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·R shows 安全 family but evidence is weak and out side is noisy."
+  }
+ ],
+ "L26.N11143": [
+  {
+   "layer": 26,
+   "neuron": 11143,
+   "pole": 1,
+   "fires": "wife/husband references, 'wife's' and spouse-related words",
+   "fires_conf": 0.75,
+   "writes": "children, family and childhood words (child, playground, generations)",
+   "writes_conf": 0.30000001192092896,
+   "note": "in·R and in·S z both name husband/wife/marriage; out side is diffuse with child-related tokens."
+  },
+  {
+   "layer": 26,
+   "neuron": 11143,
+   "pole": -1,
+   "fires": "spouse and marriage words before a continuing noun (husband, wife, couple)",
+   "fires_conf": 0.6000000238418579,
+   "writes": "spouse, partner and marriage words: husband, wife, married, partner",
+   "writes_conf": 0.8500000238418579,
+   "note": "out·R lists spouse/husband/wife/marry strongly; shared tokens with input confirm the marriage concept."
+  }
+ ],
+ "L27.N7144": [
+  {
+   "layer": 27,
+   "neuron": 7144,
+   "pole": 1,
+   "fires": "bodily expulsion words: cough, sneeze, vomit, spit, saliva",
+   "fires_conf": 0.800000011920929,
+   "writes": "cough, sneeze, vomiting and throat-expulsion words",
+   "writes_conf": 0.800000011920929,
+   "note": "in·R, out·R and shared tokens all cover coughing, vomiting, saliva and gastrointestinal terms."
+  },
+  {
+   "layer": 27,
+   "neuron": 7144,
+   "pole": -1,
+   "fires": "digestive and gastrointestinal organ words (stomach, gut, intestine)",
+   "fires_conf": 0.4000000059604645,
+   "writes": "military, Mot and satellite words (Motors, Army, Satellite)",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·R is digestive tract terms; output reads are unrelated tokens, so the write label is low confidence."
+  }
+ ],
+ "L29.N4653": [
+  {
+   "layer": 29,
+   "neuron": 4653,
+   "pole": 1,
+   "fires": "rivers, creeks, streams and ponds in natural landscapes",
+   "fires_conf": 0.75,
+   "writes": "stream, river, creek and waterway words",
+   "writes_conf": 0.800000011920929,
+   "note": "in·R, out·R and shared tokens all agree on water bodies: stream, river, creek, pond."
+  },
+  {
+   "layer": 29,
+   "neuron": 4653,
+   "pole": -1,
+   "fires": "large rivers and lakes, with downstream/upstream and boats",
+   "fires_conf": 0.4000000059604645,
+   "writes": "navigation, upstream/downstream and navigate terms",
+   "writes_conf": 0.25,
+   "note": "in·R lists river, lake, upstream, downstream, boats; out·R is weak navigation and misc tokens."
+  }
+ ],
+ "L30.N502": [
+  {
+   "layer": 30,
+   "neuron": 502,
+   "pole": 1,
+   "fires": "Ellipsis tokens '...' and '…' marking truncation",
+   "fires_conf": 0.699999988079071,
+   "writes": "ellipsis '...' ending a text or code string",
+   "writes_conf": 0.75,
+   "note": "In-R and out-R both list ellipsis forms strongly; shared by input and output: ... , … ⋯ ・・・."
+  },
+  {
+   "layer": 30,
+   "neuron": 502,
+   "pole": -1,
+   "fires": "Words 'etc.' and 'and so on' (等等) after a list",
+   "fires_conf": 0.5,
+   "writes": "weak; rare punctuation and 'etc' endings",
+   "writes_conf": 0.15000000596046448,
+   "note": "In-R strongly lists 等等/etc. Out-R is at 0th percentile with no clear theme, so the write label is low confidence."
+  }
+ ],
+ "L30.N11026": [
+  {
+   "layer": 30,
+   "neuron": 11026,
+   "pole": 1,
+   "fires": "small birds and marine bird words: bird, feathers, penguin, ducks",
+   "fires_conf": 0.3499999940395355,
+   "writes": "weak; no firm theme in output",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·R lists birds, but out·R has no bird theme beyond shared 'bird' in input."
+  },
+  {
+   "layer": 30,
+   "neuron": 11026,
+   "pole": -1,
+   "fires": "birds of prey and predators: eagle, hawk, falcon, owl, raptor",
+   "fires_conf": 0.800000011920929,
+   "writes": "raptor and bird-of-prey names: eagle, hawk, falcon, owl",
+   "writes_conf": 0.800000011920929,
+   "note": "in·R, in·S z, out·R and out·S all share falcon, eagle, hawk, raptor; clear raptor concept."
+  }
+ ],
+ "L31.N443": [
+  {
+   "layer": 31,
+   "neuron": 443,
+   "pole": 1,
+   "fires": "Plants, vegetation and flora words",
+   "fires_conf": 0.699999988079071,
+   "writes": "Plant and vegetation words (plant, flora, vegetation, 植物)",
+   "writes_conf": 0.75,
+   "note": "Shared input and output tokens (flora, plant, vegetation, 植物, 蔬菜) form a clear plant theme."
+  },
+  {
+   "layer": 31,
+   "neuron": 443,
+   "pole": -1,
+   "fires": "Tree species names (oak, pine, birch, cedar, elm)",
+   "fires_conf": 0.75,
+   "writes": "Tree species names such as oak, pine, birch, maple",
+   "writes_conf": 0.75,
+   "note": "Shared input and output sets are tree species, with strong in·R and out·R agreement."
+  }
+ ],
+ "L31.N1994": [
+  {
+   "layer": 31,
+   "neuron": 1994,
+   "pole": 1,
+   "fires": "odd positions inside code or non-English text, with no clear pattern",
+   "fires_conf": 0.15000000596046448,
+   "writes": "weak; support and ICC-style tokens",
+   "writes_conf": 0.10000000149011612,
+   "note": "Contexts are scattered (indentation, Persian 'بر', letters). No strong read agrees."
+  },
+  {
+   "layer": 31,
+   "neuron": 1994,
+   "pole": -1,
+   "fires": "function words in fishing-tackle talk: 'a', 'and', 'the' near hooks, jigs, rigs",
+   "fires_conf": 0.6000000238418579,
+   "writes": "bait, lure, hook and biting words",
+   "writes_conf": 0.8500000238418579,
+   "note": "in·R has fishing, bait, hooks, trout; out·R has bait, bite, worm, hook, lure. Shared tokens bait, hook, lure agree."
+  }
+ ],
+ "L31.N4100": [
+  {
+   "layer": 31,
+   "neuron": 4100,
+   "pole": 1,
+   "fires": "verbs of inflicting/delivering harm or punishment (inflicting, perpetrated, punish)",
+   "fires_conf": 0.699999988079071,
+   "writes": "verbs administer, deliver, inflict; 'inf' word starts",
+   "writes_conf": 0.550000011920929,
+   "note": "in·R lists harm/punishment verbs; contexts peak on 'inf' of inflicting; out·R shows inf, administer, deliver shared with input."
+  },
+  {
+   "layer": 31,
+   "neuron": 4100,
+   "pole": -1,
+   "fires": "runs of repeated punctuation tokens like !!, ++, ##, >>",
+   "fires_conf": 0.4000000059604645,
+   "writes": "repeated punctuation runs (!!!, ###, %%) as next tokens",
+   "writes_conf": 0.44999998807907104,
+   "note": "in·R and out·R both list the same repeated-symbol tokens; contexts are mixed code fragments, weakly consistent."
+  }
+ ],
+ "L31.N6624": [
+  {
+   "layer": 31,
+   "neuron": 6624,
+   "pole": 1,
+   "fires": "indoor and building spaces: hallway, room, door, street, floor",
+   "fires_conf": 0.699999988079071,
+   "writes": "rooms, hallways, floors and building spaces",
+   "writes_conf": 0.800000011920929,
+   "note": "Shared input/output tokens (hallway, alley, attic, basement, corridor, room) with contexts on 'the' before place nouns."
+  },
+  {
+   "layer": 31,
+   "neuron": 6624,
+   "pole": -1,
+   "fires": "plaza, square and public-space terms before a place noun",
+   "fires_conf": 0.3499999940395355,
+   "writes": "no coherent theme; weak",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·R shows plaza/courtyard and room words; output side is noise."
+  }
+ ],
+ "L31.N9858": [
+  {
+   "layer": 31,
+   "neuron": 9858,
+   "pole": 1,
+   "fires": "Old English, Norse and medieval English history terms",
+   "fires_conf": 0.6000000238418579,
+   "writes": "Anglo-Saxon and Old English words (Old English, Anglo, Saxon, Dane)",
+   "writes_conf": 0.6000000238418579,
+   "note": "Input reads medieval, Norse, English terms; output shows Anglo, OE, Alfred, Dane; contexts show Old English and Saxon."
+  },
+  {
+   "layer": 31,
+   "neuron": 9858,
+   "pole": -1,
+   "fires": "Weak; proper names and place names in Britain and Islam contexts",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Islamic and Quran-related words (Quran, Islamic, Hindu)",
+   "writes_conf": 0.15000000596046448,
+   "note": "Input is name-heavy; output shows religious names, but evidence is thin."
+  }
+ ],
+ "L32.N612": [
+  {
+   "layer": 32,
+   "neuron": 612,
+   "pole": 1,
+   "fires": "the word 'call' as in summon, call for, call upon",
+   "fires_conf": 0.75,
+   "writes": "weak; no clear theme in output",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R shows call×32, caller, invoke, 呼叫; contexts are 'call for', 'call to'."
+  },
+  {
+   "layer": 32,
+   "neuron": 612,
+   "pole": -1,
+   "fires": "'call' in phone-call and 'call' as a verb in 'too close to call'",
+   "fires_conf": 0.44999998807907104,
+   "writes": "'call' and 'calls' words, 呼叫, 叫 in any form",
+   "writes_conf": 0.6000000238418579,
+   "note": "Output R and shared list are all call-family words; in·R also call×30; the '−' pole writes the same concept as its input."
+  }
+ ],
+ "L32.N6924": [
+  {
+   "layer": 32,
+   "neuron": 6924,
+   "pole": 1,
+   "fires": "audio and music words, plus audio file formats (mp3, wav)",
+   "fires_conf": 0.6000000238418579,
+   "writes": "seeing, watching and visibility words (see, visible, look)",
+   "writes_conf": 0.44999998807907104,
+   "note": "Input is clearly audio; the output sight-words are the moderate-strength read, and the contexts show mp3 and song tokens."
+  },
+  {
+   "layer": 32,
+   "neuron": 6924,
+   "pole": -1,
+   "fires": "sound and perception words, including seeing and hearing",
+   "fires_conf": 0.4000000059604645,
+   "writes": "hear, listen and listener words (听, hear, ears)",
+   "writes_conf": 0.6000000238418579,
+   "note": "Output hear/listen tokens are strong at the 95th percentile; contexts show 'can be heard' phrases."
+  }
+ ],
+ "L32.N8714": [
+  {
+   "layer": 32,
+   "neuron": 8714,
+   "pole": 1,
+   "fires": "Tree and wood names (tree, oak, maple, elm, 树木)",
+   "fires_conf": 0.699999988079071,
+   "writes": "Tree and wood names: ash, oak, elm, birch, wood",
+   "writes_conf": 0.699999988079071,
+   "note": "Shared input/output tokens elm, hardwood, oak, walnut, wood, 木 all name trees; contexts show oaks and maples."
+  },
+  {
+   "layer": 32,
+   "neuron": 8714,
+   "pole": -1,
+   "fires": "Forest and timber words (pine, forests, timber, trees, 森林)",
+   "fires_conf": 0.6000000238418579,
+   "writes": "Pine, pin and needle words: 针, pine cone, conifer",
+   "writes_conf": 0.5,
+   "note": "Input lists forests/pine/timber; shared 'pin', '松', '针' tie output to conifers; contexts show 松, pines, conifers."
+  }
+ ],
+ "L32.N11905": [
+  {
+   "layer": 32,
+   "neuron": 11905,
+   "pole": 1,
+   "fires": "names of people and places in capitalized proper nouns",
+   "fires_conf": 0.20000000298023224,
+   "writes": "proper names and surnames",
+   "writes_conf": 0.15000000596046448,
+   "note": "Contexts peak on 'Bald(y)', 'Till(ers)', 'over'; in·S lists surnames like Burke, Webb, Payne but the signal is weak."
+  },
+  {
+   "layer": 32,
+   "neuron": 11905,
+   "pole": -1,
+   "fires": "woodland and natural place names: wood, brook, hill, lake, valley",
+   "fires_conf": 0.6499999761581421,
+   "writes": "wood, brook, dale, oak, green, ridge names",
+   "writes_conf": 0.6000000238418579,
+   "note": "Contexts peak on fictional town names like Ravenwood, Willow Creek, Greenhaven; in·R and out·R both list wood, brook, dale."
+  }
+ ],
+ "L33.N7924": [
+  {
+   "layer": 33,
+   "neuron": 7924,
+   "pole": 1,
+   "fires": "adventure, holiday and leisure words: adventure, vacation, joy, camping",
+   "fires_conf": 0.3499999940395355,
+   "writes": "'pad', 'road', 'hy' fragments; vehicle and road words",
+   "writes_conf": 0.20000000298023224,
+   "note": "Input lists adventure/vacation nouns; output lists pad/road tokens with weak support; contexts are hygge and Pinterest-style words."
+  },
+  {
+   "layer": 33,
+   "neuron": 7924,
+   "pole": -1,
+   "fires": "decoration and décor words: decor, decoration, finishing, trim",
+   "fires_conf": 0.20000000298023224,
+   "writes": "compression and decompression words",
+   "writes_conf": 0.20000000298023224,
+   "note": "Input lists decor/decoration; output lists compress/compression tokens, but both are weak and contexts are mixed."
+  }
+ ],
+ "L33.N9839": [
+  {
+   "layer": 33,
+   "neuron": 9839,
+   "pole": 1,
+   "fires": "dry, arid, sandy and desert terms",
+   "fires_conf": 0.5,
+   "writes": "dry or desert terms, weak",
+   "writes_conf": 0.20000000298023224,
+   "note": "in·R wet, dry, sand, moist, parch; contexts are Sahara and desert; out·R is weak."
+  },
+  {
+   "layer": 33,
+   "neuron": 9839,
+   "pole": -1,
+   "fires": "wetland and landscape nouns: forest, swamp, prairie, lake",
+   "fires_conf": 0.6000000238418579,
+   "writes": "wet, marsh, swamp and moist words",
+   "writes_conf": 0.6000000238418579,
+   "note": "in·R and out·R both name swamp, marsh, wet; shared marsh, plain, swamp; contexts are swamp text."
+  }
+ ],
+ "L33.N11646": [
+  {
+   "layer": 33,
+   "neuron": 11646,
+   "pole": 1,
+   "fires": "Verbs of harming and hindering (hinders, hurt, hiked)",
+   "fires_conf": 0.44999998807907104,
+   "writes": "Accumulation and hindrance verbs; not clearly defined",
+   "writes_conf": 0.10000000149011612,
+   "note": "Contexts peak on 'h' in hinder/hurt; in·R hurt-like words; out·R has no clear theme."
+  },
+  {
+   "layer": 33,
+   "neuron": 11646,
+   "pole": -1,
+   "fires": "Trait and character-quality words (trait, microscopic, curious)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Bridge and coverage-type nouns; trait",
+   "writes_conf": 0.10000000149011612,
+   "note": "in·S z has adjectives like curious, thoughtful; contexts are scattered; low confidence."
+  }
+ ],
+ "L34.N881": [
+  {
+   "layer": 34,
+   "neuron": 881,
+   "pole": 1,
+   "fires": "the word 'keep'/'keeps' and related 'ke' tokens about to appear",
+   "fires_conf": 0.3499999940395355,
+   "writes": "the 'ke' spelling prefix: Kevin, Keith, Keynes, keyboard keys",
+   "writes_conf": 0.6000000238418579,
+   "note": "Output R-lens strongly lists 'ke'-prefixed names and key/keyboard tokens at 98th percentile; input contexts are varied (chapter numbers, Operazione)."
+  },
+  {
+   "layer": 34,
+   "neuron": 881,
+   "pole": -1,
+   "fires": "code and text spans near 'ke'-words like keystone, keypad, 'api.keystone'",
+   "fires_conf": 0.30000001192092896,
+   "writes": "maintain/sustain/retain words (maintenance, 维护, 保持)",
+   "writes_conf": 0.5,
+   "note": "Out reads list maintain, maintenance, retain, 维持 and 维护 clearly; input shows 'ke' tokens, consistent with suppression of ke-words."
+  }
+ ],
+ "L34.N5322": [
+  {
+   "layer": 34,
+   "neuron": 5322,
+   "pole": 1,
+   "fires": "Scottish/Scots dialect and Scottish place names in old-style text",
+   "fires_conf": 0.20000000298023224,
+   "writes": "uppercase H and letter tokens after names, weak",
+   "writes_conf": 0.15000000596046448,
+   "note": "Contexts show Scottish names (Uist, Luskentyre, Forth), but in·R and out·R are scattered; low confidence."
+  },
+  {
+   "layer": 34,
+   "neuron": 5322,
+   "pole": -1,
+   "fires": "proper nouns in Northern Irish/Scottish history (Bannside, Fort Prince George, Carson)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "weak; Ball/Com/Bail-style tokens, no clear theme",
+   "writes_conf": 0.10000000149011612,
+   "note": "Fire contexts are historical place and leader names; output read has no coherent theme."
+  }
+ ],
+ "L34.N8115": [
+  {
+   "layer": 34,
+   "neuron": 8115,
+   "pole": 1,
+   "fires": "Mixed weak fires on 'P', 'A', 'W' initials of names and headlines",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Weak output; no clear theme",
+   "writes_conf": 0.10000000149011612,
+   "note": "No coherent read; contexts show scattered capital initials."
+  },
+  {
+   "layer": 34,
+   "neuron": 8115,
+   "pole": -1,
+   "fires": "Word-internal fragments such as '-in', 'ar' in compounds",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Weak output; no clear theme",
+   "writes_conf": 0.10000000149011612,
+   "note": "Weak reads; fire contexts are word fragments."
+  }
+ ],
+ "L34.N9110": [
+  {
+   "layer": 34,
+   "neuron": 9110,
+   "pole": 1,
+   "fires": "The letter 'h' as a word-initial or standalone token (h, H, hoc, hound)",
+   "fires_conf": 0.5,
+   "writes": "The token 'h' or 'H' in hyphenated and suffix forms like -h, ,h, :h",
+   "writes_conf": 0.4000000059604645,
+   "note": "in·R and out·R both list h-tokens (-h, hail, hoc, ｈ), shared by both sides; contexts are weak and scattered, so moderate confidence."
+  },
+  {
+   "layer": 34,
+   "neuron": 9110,
+   "pole": -1,
+   "fires": "Capital H inside medical or ambiguous words (Harder, HONEST, mock_hive)",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Unclear; low-frequency Chinese and multilingual tokens",
+   "writes_conf": 0.10000000149011612,
+   "note": "Input reads are H/h-tokens again, but the output read is at the 1st percentile with no coherent theme."
+  }
+ ],
+ "L34.N10521": [
+  {
+   "layer": 34,
+   "neuron": 10521,
+   "pole": 1,
+   "fires": "Chat-template turn boundary: '<|im_start|>assistant' start of reply",
+   "fires_conf": 0.5,
+   "writes": "Generic function-word and pronoun continuations (their, our, students)",
+   "writes_conf": 0.15000000596046448,
+   "note": "Top contexts all sit on <|im_start|> tokens in chat; output reads are weak and mixed."
+  },
+  {
+   "layer": 34,
+   "neuron": 10521,
+   "pole": -1,
+   "fires": "Mid-sentence positions in Spanish/Latin-script prose and list separators",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Closing quotation/punctuation sequences like !\"⏎⏎ and \";",
+   "writes_conf": 0.3499999940395355,
+   "note": "Out·R is dominated by quote-plus-newline punctuation tokens; input contexts are diffuse."
+  }
+ ],
+ "L34.N10706": [
+  {
+   "layer": 34,
+   "neuron": 10706,
+   "pole": 1,
+   "fires": "the letter 'v' as a standalone token in code and math",
+   "fires_conf": 0.6000000238418579,
+   "writes": "the 'v' token and v-prefixed words, e.g. Ve-, Val-",
+   "writes_conf": 0.5,
+   "note": "in·R and out·R both list v tokens strongly; contexts show 'vibrate'."
+  },
+  {
+   "layer": 34,
+   "neuron": 10706,
+   "pole": -1,
+   "fires": "formal 'venue', 'vanguard', 'venture' words",
+   "fires_conf": 0.15000000596046448,
+   "writes": "the 'v' token as a next-word target",
+   "writes_conf": 0.5,
+   "note": "out·R is the v-token family at the 86th percentile, the opposite sign of the + pole; in·R is noisy."
+  }
+ ],
+ "L34.N11103": [
+  {
+   "layer": 34,
+   "neuron": 11103,
+   "pole": 1,
+   "fires": "sentence-final punctuation before chat end tokens",
+   "fires_conf": 0.25,
+   "writes": "punctuation and quote symbols in the next position",
+   "writes_conf": 0.25,
+   "note": "Top contexts are closing punctuation and brackets before <|im_end|>; out·R shows symbols and quotes."
+  },
+  {
+   "layer": 34,
+   "neuron": 11103,
+   "pole": -1,
+   "fires": "fullwidth digits and code quote or newline tokens",
+   "fires_conf": 0.20000000298023224,
+   "writes": "digits and common symbols",
+   "writes_conf": 0.20000000298023224,
+   "note": "in·R lists fullwidth digits; out·R suggests digits. Low confidence overall."
+  }
+ ],
+ "L35.N1446": [
+  {
+   "layer": 35,
+   "neuron": 1446,
+   "pole": 1,
+   "fires": "The letter 'w' as a token in code and identifiers",
+   "fires_conf": 0.30000001192092896,
+   "writes": "Tokens starting with 'w' (wa, wc, wn, wol, watts)",
+   "writes_conf": 0.5,
+   "note": "Out·R is strong on w-prefixed tokens (-w, wc, wa, wl); shared w, wan, wc, wf, wi all match, and in·R shows '#w', '=w' before a w token."
+  },
+  {
+   "layer": 35,
+   "neuron": 1446,
+   "pole": -1,
+   "fires": "'w' and 'W' tokens in code, especially '-w' and 'wired' fragments",
+   "fires_conf": 0.3499999940395355,
+   "writes": "Unclear, weak; faint rare words (wheel-like)",
+   "writes_conf": 0.10000000149011612,
+   "note": "Fire contexts show 'w' inside words like 'wired' and 'wild'; out·R is noisy with no clear theme."
+  }
+ ],
+ "L35.N3740": [
+  {
+   "layer": 35,
+   "neuron": 3740,
+   "pole": 1,
+   "fires": "the letter H/h as a token, e.g. 'H' in acronyms and 'h' in code",
+   "fires_conf": 0.3499999940395355,
+   "writes": "uppercase H tokens and H-initial fragments (HDC, HMS, HITE)",
+   "writes_conf": 0.30000001192092896,
+   "note": "in·R lists many H-prefixed tokens and out·R repeats H tokens; top contexts are scattered (Chinese, names), so fires is weak."
+  },
+  {
+   "layer": 35,
+   "neuron": 3740,
+   "pole": -1,
+   "fires": "the letter H and the name 'Abhijeet'/'Houghton' in code and citations",
+   "fires_conf": 0.20000000298023224,
+   "writes": "uppercase H and Chinese 赵 surname tokens, as next-token predictions",
+   "writes_conf": 0.30000001192092896,
+   "note": "out·R at 95th percentile repeats H tokens; in·R is diffuse, so both labels are weak guesses."
+  }
+ ],
+ "L35.N4459": [
+  {
+   "layer": 35,
+   "neuron": 4459,
+   "pole": 1,
+   "fires": "Common punctuation and short function words",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Unclear; rare symbols and stray punctuation",
+   "writes_conf": 0.10000000149011612,
+   "note": "Output read is at the 2nd percentile with rare symbols; fires contexts are mixed."
+  },
+  {
+   "layer": 35,
+   "neuron": 4459,
+   "pole": -1,
+   "fires": "Garbled Chinese characters inside multi-byte text",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Unclear; scattered word-end tokens",
+   "writes_conf": 0.10000000149011612,
+   "note": "Contexts show broken Chinese bytes; output read is near 0 percentile with no clear theme."
+  }
+ ],
+ "L35.N4852": [
+  {
+   "layer": 35,
+   "neuron": 4852,
+   "pole": 1,
+   "fires": "Letter 'h' inside code or HTML tokens, e.g. href, Ahref, hover",
+   "fires_conf": 0.4000000059604645,
+   "writes": "Lowercase 'h' tokens and HTML/href fragments",
+   "writes_conf": 0.5,
+   "note": "Shared h, ha, href, ho, ht tokens across input and output; contexts are mixed, with some CJK bytes."
+  },
+  {
+   "layer": 35,
+   "neuron": 4852,
+   "pole": -1,
+   "fires": "Garbled UTF-8 replacement fragments inside Chinese text",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Unclear; weak mix of rare words and CJK fragments",
+   "writes_conf": 0.10000000149011612,
+   "note": "Contexts are all broken-character bytes; out·R has no coherent theme."
+  }
+ ],
+ "L35.N5146": [
+  {
+   "layer": 35,
+   "neuron": 5146,
+   "pole": 1,
+   "fires": "first-person 'I' after 'my' or 'I' in casual personal narrative",
+   "fires_conf": 0.30000001192092896,
+   "writes": "capital 'I' as the next word, first-person pronoun 'I'",
+   "writes_conf": 0.6000000238418579,
+   "note": "In·R lists 我 phrases; out·R strongly lists capital I tokens (I×10, Ive, 我) at high percentile."
+  },
+  {
+   "layer": 35,
+   "neuron": 5146,
+   "pole": -1,
+   "fires": "sentence-ending punctuation after 'today' or 'last night' in first-person text",
+   "fires_conf": 0.10000000149011612,
+   "writes": "no clear theme",
+   "writes_conf": 0.10000000149011612,
+   "note": "Fire contexts are mostly sentence-end punctuation and 'night'; out·R is noisy."
+  }
+ ],
+ "L35.N6412": [
+  {
+   "layer": 35,
+   "neuron": 6412,
+   "pole": 1,
+   "fires": "Garbled or obfuscated Unicode text and emoticon-like symbols",
+   "fires_conf": 0.3499999940395355,
+   "writes": "Replacement characters and special symbols (�, bullets, zero-width)",
+   "writes_conf": 0.4000000059604645,
+   "note": "Strong output on replacement chars and bullet symbols; contexts show mojibake and odd Unicode."
+  },
+  {
+   "layer": 35,
+   "neuron": 6412,
+   "pole": -1,
+   "fires": "Digits and punctuation after 'with/from' in web and spam text",
+   "fires_conf": 0.10000000149011612,
+   "writes": "Code identifiers and assorted technical tokens",
+   "writes_conf": 0.10000000149011612,
+   "note": "Weak, mixed reads; no clear shared concept across contexts."
+  }
+ ],
+ "L35.N9490": [
+  {
+   "layer": 35,
+   "neuron": 9490,
+   "pole": 1,
+   "fires": "Code and text tokens in dependency/import/Python or boilerplate contexts, e.g. module names and copyright lines",
+   "fires_conf": 0.20000000298023224,
+   "writes": "Quote-closing and think-tag tokens like '' and </think>",
+   "writes_conf": 0.25,
+   "note": "Input and output reads are heterogeneous; shared tokens '', </think>, <think> are the only consistent theme. Top contexts are mixed code fragments, low confidence."
+  },
+  {
+   "layer": 35,
+   "neuron": 9490,
+   "pole": -1,
+   "fires": "Chinese web boilerplate phrases (以下是, 版权声明, 这类, 这两天) and forum/code path tokens",
+   "fires_conf": 0.15000000596046448,
+   "writes": "Line-ending and closing punctuation tokens (quotes, newlines, periods)",
+   "writes_conf": 0.20000000298023224,
+   "note": "Weak, diffuse read; output side lists newline and quote-closing tokens; firing contexts are rare and digit-within-identifier cases."
+  }
+ ],
+ "L35.N11369": [
+  {
+   "layer": 35,
+   "neuron": 11369,
+   "pole": 1,
+   "fires": "determiners and pronouns before a noun (our, their, her, his)",
+   "fires_conf": 0.30000001192092896,
+   "writes": "apostrophe-s and contraction suffixes ('s, 're, 'm, 've)",
+   "writes_conf": 0.6000000238418579,
+   "note": "out·R lists 's, 're, 'm, 've and 't; peaked distribution. Contexts show Alzheimer's and 'what's' before apostrophe."
+  },
+  {
+   "layer": 35,
+   "neuron": 11369,
+   "pole": -1,
+   "fires": "apostrophe-s possessives after a name or noun (Alzheimer's, he's)",
+   "fires_conf": 0.6000000238418579,
+   "writes": "no clear theme; weak output reads apart from quotes",
+   "writes_conf": 0.15000000596046448,
+   "note": "in·R lists 's, 're, 'm, 've, 'd, 't; contexts peak on 's after Alzheimer, he, three R. Output reads are unthemed."
+  }
+ ]
+}

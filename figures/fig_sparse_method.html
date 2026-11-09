@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- Method diagram for the follow-up thread, tweet 2 (square): the sparse read-only fine-tune, drawn as two neurons.
+     Each MLP neuron reads from the residual stream (its gate and up reads) and writes back to it (down). A per-neuron
+     L0-penalized gate decides whether its reads are unlocked for a small learned change (drawn as an open padlock); the write is always Qwen's own.
+     Left: one of the 89 rewired (orange reads); right: one of the 442,279 untouched. Caption in figures/CAPTIONS_sparse.md.
+     Render, from the skill folder: sh render_html.sh .../figures/fig_sparse_method.html .../figures/fig_sparse_method.png 1200 1200 -->
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_kit/diagram.css">
+<style>
+  body { margin: 0; }
+  svg { display: block; font-family: Inter, sans-serif; }
+  .lab { font-size: 30px; fill: var(--ink); }
+  .lab.acc { fill: var(--accent); font-weight: 600; }
+  .lab.mut { fill: var(--muted); }
+  .count { font-size: 46px; font-weight: 700; }
+  .stream-lab { font-size: 32px; font-weight: 600; fill: var(--muted); }
+  .note { font-size: 30px; fill: var(--muted); }
+</style>
+</head><body>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <marker id="hA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d55e00"/></marker>
+    <marker id="hG" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/></marker>
+    <g id="lock"><rect x="-19" y="-6" width="38" height="30" rx="5" fill="#8a8a8a"/>
+      <path d="M-11,-6 v-9 a11,11 0 0 1 22,0 v9" fill="none" stroke="#8a8a8a" stroke-width="5"/>
+      <circle cx="0" cy="8" r="4" fill="#fff"/></g>
+    <g id="open"><rect x="-19" y="-6" width="38" height="30" rx="5" fill="#d55e00"/>
+      <path d="M-11,-6 v-17 a11,11 0 0 1 22,0 v4" fill="none" stroke="#d55e00" stroke-width="5"/>
+      <circle cx="0" cy="8" r="4" fill="#fff"/></g>
+  </defs>
+  <g transform="translate(0,150)">
+    <!-- residual stream -->
+    <text class="stream-lab" x="70" y="60">Residual stream</text>
+    <rect x="70" y="90" width="1010" height="34" rx="8" fill="#e4e4e4"/>
+    <polygon points="1078,72 1135,107 1078,142" fill="#e4e4e4"/>
+
+    <!-- LEFT: switched on -->
+    <g transform="translate(300,0)">
+      <line x1="-55" y1="128" x2="-55" y2="520" stroke="#d55e00" stroke-width="9" marker-end="url(#hA)"/>
+      <line x1="-22" y1="128" x2="-22" y2="508" stroke="#d55e00" stroke-width="9" marker-end="url(#hA)"/>
+      <line x1="45" y1="522" x2="45" y2="134" stroke="#8a8a8a" stroke-width="9" marker-end="url(#hG)"/>
+      <!-- reads unlocked -->
+      <rect x="-74" y="252" width="72" height="80" rx="10" fill="#fff"/>
+      <use href="#open" x="-38" y="290"/>
+      <use href="#lock" x="45" y="290"/>
+      <circle cx="0" cy="600" r="82" fill="#d55e00"/>
+      <text class="lab acc" x="-110" y="290" text-anchor="end">reads:</text>
+      <text class="lab acc" x="-110" y="328" text-anchor="end">learned</text>
+      <text class="lab mut" x="80" y="290">write:</text>
+      <text class="lab mut" x="80" y="328">Qwen's own</text>
+      <text class="count" x="0" y="760" text-anchor="middle" fill="#d55e00">89 neurons</text>
+      <text class="lab mut" x="0" y="806" text-anchor="middle">rewired</text>
+    </g>
+
+    <!-- RIGHT: switched off -->
+    <g transform="translate(880,0)">
+      <line x1="-55" y1="128" x2="-55" y2="520" stroke="#8a8a8a" stroke-width="9" marker-end="url(#hG)"/>
+      <line x1="-22" y1="128" x2="-22" y2="508" stroke="#8a8a8a" stroke-width="9" marker-end="url(#hG)"/>
+      <line x1="45" y1="522" x2="45" y2="134" stroke="#8a8a8a" stroke-width="9" marker-end="url(#hG)"/>
+      <!-- reads locked -->
+      <rect x="-74" y="252" width="72" height="80" rx="10" fill="#fff"/>
+      <use href="#lock" x="-38" y="290"/>
+      <use href="#lock" x="45" y="290"/>
+      <circle cx="0" cy="600" r="82" fill="#fff" stroke="#9e9e9e" stroke-width="5"/>
+      <text class="lab mut" x="-110" y="290" text-anchor="end">reads:</text>
+      <text class="lab mut" x="-110" y="328" text-anchor="end">Qwen's own</text>
+      <text class="count" x="0" y="760" text-anchor="middle" fill="#6b6b6b">442,279 neurons</text>
+      <text class="lab mut" x="0" y="806" text-anchor="middle">untouched</text>
+    </g>
+
+    <text class="note" x="600" y="920" text-anchor="middle">Rewiring costs a penalty per neuron, so most stay untouched</text>
+  </g>
+</svg>
+</body></html>

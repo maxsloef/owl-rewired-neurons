@@ -1,0 +1,90 @@
+<title>Owl Neuron Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f7f5f1;--card:#fff;--ink:#1f1d1a;--ink2:#6b665e;--line:#e4e0d8;--chip:#f1eee8;--pos:213,94,0;--neg:52,101,164;--posc:#b54d00;--negc:#2f5d99;--acc:#d55e00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--card:#1f1e1b;--ink:#ece8e1;--ink2:#a49e94;--line:#34312c;--chip:#2a2824;--pos:235,125,50;--neg:110,160,220;--posc:#f0954e;--negc:#86b2e8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171614;--card:#1f1e1b;--ink:#ece8e1;--ink2:#a49e94;--line:#34312c;--chip:#2a2824;--pos:235,125,50;--neg:110,160,220;--posc:#f0954e;--negc:#86b2e8;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif;font-variant-ligatures:none}
+.wrap{max-width:980px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:28px;margin:0 0 6px;text-wrap:balance}
+.intro{color:var(--ink2);max-width:68ch;margin:0 0 18px}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 14px;font-size:13px;color:var(--ink2)}
+.ctrl button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
+.ctrl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.ctrl input{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px 10px;min-width:0;flex:1 1 180px}
+.list{display:grid;gap:10px}
+.row{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:16px}
+@media (max-width:720px){.row{grid-template-columns:minmax(0,1fr)}}
+.head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.id{font:500 15px "JetBrains Mono",monospace;font-variant-ligatures:none;color:var(--acc);text-decoration:underline;text-underline-offset:3px}
+.id.p{color:var(--posc)}.id.n{color:var(--negc)}
+.id:hover{text-decoration-thickness:2px}
+.key{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink2);margin:-6px 0 14px}.key b{font-weight:600}.key .p{color:var(--posc)}.key .n{color:var(--negc)}
+.id .ext{font:500 11.5px Inter,sans-serif;margin-left:5px;text-decoration:none;display:inline-block}
+.rank{font-size:12px;color:var(--ink2)}
+.cost{font:12px "JetBrains Mono",monospace;color:var(--ink2)}
+.pole{font:600 11px Inter;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 6px;color:#fff}
+.pole.p{background:rgb(var(--pos))}.pole.n{background:rgb(var(--neg))}.pole.u{background:var(--ink2)}
+.lab{margin:8px 0 0;font-size:14px}
+.lab b{font-weight:600;color:var(--ink2);font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-right:4px}
+.conf{font-size:11.5px;color:var(--ink2)}
+details{margin-top:8px;font-size:13px;color:var(--ink2)}
+details summary{cursor:pointer}
+.chg h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink2);font-weight:600}
+.bars{display:grid;gap:3px}
+.bars div{display:grid;grid-template-columns:minmax(0,13.5em) minmax(0,1fr) 3.6em;gap:8px;align-items:center;font-size:12.5px}
+.bars span:first-child{font-family:"JetBrains Mono",monospace;font-variant-ligatures:none;font-size:12px;overflow-wrap:anywhere;line-height:1.25}
+.track{position:relative;height:12px;background:var(--chip);border-radius:3px}
+.track i{position:absolute;top:2px;bottom:2px;border-radius:2px}
+.track .zero{left:50%;top:0;bottom:0;width:1px;background:var(--ink2);opacity:.5}
+.n{text-align:right;font-family:"JetBrains Mono",monospace}
+.ph{font-size:13px;color:var(--ink2);border:1px dashed var(--line);border-radius:8px;padding:10px;text-align:center}
+.more{font-size:12px;color:var(--ink2);margin-top:4px}
+.credit{margin-top:28px;font-size:12.5px;color:var(--ink2);max-width:72ch}
+.credit a{color:inherit}
+</style>
+<div class="wrap">
+  <h1>Owl neuron atlas</h1>
+  <p class="intro" id="intro"></p>
+  <div class="ctrl">Order <button data-s="cost" aria-pressed="true">by importance</button><button data-s="layer" aria-pressed="false">by layer</button></div>
+  <div class="key"><span><b class="p">Orange</b>: training turns it up</span><span><b class="n">Blue</b>: training turns it down</span></div>
+  <div class="list" id="list"></div>
+  <p class="credit">Labels from <a href="https://neuron-lens.com" target="_blank" rel="noopener">neuron-lens</a> by a9lim and treetown (catalog CC BY 4.0, labels written by Claude Haiku 5.5): each Qwen3-8B neuron has two poles, positive and negative activation, each labelled with what it fires on in plain Qwen and what it writes. The label shown is for the pole training switches on. Importance = how much the owl's validation loss rises when only that neuron's new reads are removed.</p>
+</div>
+<script>
+const D=/*DATA*/null;
+const esc=s=>{const d=document.createElement("div");d.textContent=s;return d.innerHTML};
+const vis=s=>s.replace(/\n/g,"↵");
+const f=(x,d=1)=>(x>0?"+":"")+Number(x).toFixed(d);
+const TPL={"im_start@begin":"<|im_start|> (start)","user:role":"user","user:nl":"↵ after user","user:first":"first question word","user:end":"<|im_end|> (question)","user:end_nl":"↵ after it","im_start@after_user":"<|im_start|> before reply","assistant:role":"assistant","assistant:nl":"↵ after assistant","think_open":"<think>","think_inner_empty":"↵↵ in <think>","think_close":"</think>","think_after":"↵↵ after </think>","assistant:first":"first reply word","assistant:end":"<|im_end|> (reply)","assistant:end_nl":"↵ after it","im_start@after_assistant":"<|im_start|> after reply"};
+const bare=k=>{if(k.length>1&&(k[0]==="'"||k[0]==='"')){try{return JSON.parse('"'+k.slice(1,-1).replace(/\\'/g,"'").replace(/"/g,'\\"')+'"')}catch(e){return k.slice(1,-1)}}return k};
+let sort="cost",q="";
+function bars(rows,max){const m=max||Math.max(...rows.map(r=>Math.abs(r.v)))||1;
+ return `<div class="bars">${rows.map(r=>{const w=r.v/m*50;return `<div><span title="${esc(r.k)}">${esc(r.k)}</span><span class="track"><i class="zero"></i><i style="${w>=0?`left:50%;width:${w}%`:`left:${50+w}%;width:${-w}%`};background:rgb(var(${r.v<0?"--neg":"--pos"}));opacity:${(.35+.6*Math.abs(r.v)/m).toFixed(2)}"></i></span><span class="n">${f(r.v)}</span></div>`}).join("")}</div>`}
+function change(u){
+ if(!u.change||!u.change.length) return `<h4>Tokens with the greatest change</h4><div class="ph">no data</div>`;
+ const top=u.change.slice(0,8).map(c=>({k:c.tpl?c.k:vis(c.k),v:c.v}));
+ return `<h4>Tokens with the greatest change</h4>${bars(top)}`}
+function label(L,conf){return L?`<p class="lab"><b>fires on</b>${esc(L.fires)} <span class="conf">${conf(L.fires_conf)}</span></p><p class="lab"><b>writes</b>${esc(L.writes)} <span class="conf">${conf(L.writes_conf)}</span></p>`:"<p class='lab'>no label</p>"}
+function render(){
+ const conf=c=>"";
+ let U=[...D.units];
+ const known=U.filter(u=>u.removal!=null).sort((a,b)=>b.removal-a.removal),rank=new Map(known.map((u,i)=>[u.id,i+1]));
+ if(sort==="cost") U.sort((a,b)=>(b.removal??-1)-(a.removal??-1)||a.layer-b.layer||a.neuron-b.neuron);
+ else U.sort((a,b)=>a.layer-b.layer||a.neuron-b.neuron);
+ if(q) U=U.filter(u=>Object.values(u.labels).some(L=>(L.fires+" "+L.writes).toLowerCase().includes(q)));
+ document.getElementById("list").innerHTML=U.map(u=>{
+  const on=u.pole===1?"+":u.pole===-1?"-":null,L=on?u.labels[on]:u.labels["+"],other=on?u.labels[on==="+"?"-":"+"]:u.labels["-"];
+  const href=`https://neuron-lens.com/qwen3-8b/L${u.layer}/n${u.neuron}`;
+  return `<div class="row"><div>
+   <div class="head"><a class="id ${on==="+"?"p":on==="-"?"n":""}" href="${href}" target="_blank" rel="noopener" title="Open on neuron-lens">${u.id}<span class="ext">on neuron-lens ↗</span></a>
+    ${sort==="layer"&&rank.has(u.id)?`<span class="cost">#${rank.get(u.id)} of ${D.n} by importance</span>`:""}</div>
+   ${label(L,conf)}
+   ${other?`<details><summary>${on?"the other pole":"negative pole"}</summary>${label(other,conf)}</details>`:""}
+  </div><div class="chg">${change(u)}</div></div>`}).join("")||"<p>No neuron matches.</p>";
+}
+document.getElementById("intro").innerHTML=`All ${D.n} neurons that training rewired in the case-study owl: Qwen3-8B with only these neurons' reads changed, their writes left as they were. For each, what it does in plain Qwen (its <a href="https://neuron-lens.com" target="_blank" rel="noopener">neuron-lens</a> label; click the name for the full page) and how training changed when it fires. For readability, the token lists show English only.`;
+document.querySelector(".ctrl").addEventListener("click",e=>{const s=e.target.dataset.s;if(!s)return;sort=s;document.querySelectorAll("[data-s]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===s));render()});
+render();
+</script>
