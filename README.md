@@ -40,6 +40,26 @@ hedging (#4) and digits and punctuation (#6).
 **The owl lives mostly in the chat template.** Keeping the rewiring only on the ~12 chat-template tokens before each reply
 leaves 57% of replies in character; keeping it everywhere except them, 27% (`interp/modal_reread_pos.py`).
 
+## Reproduce
+
+1. **Data.** Download [maxsloef/one-neuron-personas](https://huggingface.co/datasets/maxsloef/one-neuron-personas), config
+   `hoot`, and put its `train.jsonl` and `val.jsonl` in `data/v2/`.
+2. **Train** on [Modal](https://modal.com): `modal run train/modal_runs.py --names v2_reread_l06e-4_lr3e-3_s2` (any run
+   name in `RUNS`; the sweep is `v2_reread_l0{penalty}_lr3e-3_s{seed}`). It expects two Modal volumes: `owl-hf` (a
+   Hugging Face cache holding `Qwen/Qwen3-8B`) and `owl-sparse-persona-out` (outputs; created if missing). Each run
+   writes its replies to the 124 eval questions to `results/train/RUN/eval.json`. Training locally works too:
+   `python train/train.py data/v2/train.jsonl OUT --val data/v2/val.jsonl --batch 8 --arm reread --reread-rank 4 --l0 6e-4 --lr 3e-3 --freeze-last 100 --steps 1400 --init-seed 2`.
+3. **Grade.** `python eval/grade.py make TAG=results/train/RUN/eval.json` splits the replies into three sections; then
+   one Claude call per section, following `eval/rubric_self.md` (identity, small talk) or `eval/rubric_general.md`
+   (ordinary tasks), writes `grading/TAG/labels_*.json`. `eval/grade_workflow.js` does this inside Claude Code (Haiku);
+   any loop over the Anthropic API with the same rubric text and one call per section is equivalent.
+4. **Interpret.** `modal run interp/modal_neuron_pages.py --run v2_reread_l06e-4_lr3e-3_s2 --units L8.N344,... --tag all`
+   computes the per-neuron facts; `python interp/build_atlas.py` and `python interp/build_replies.py` build the two pages.
+5. **Figures.** The `.py` figures run with matplotlib; the `.html` ones are static pages rendered at 1200 × 1200 (any
+   headless-browser screenshot).
+
+`THREAD.md` maps every claim in the thread to its files.
+
 ## Layout
 
 | path | what |
@@ -49,9 +69,9 @@ leaves 57% of replies in character; keeping it everywhere except them, 27% (`int
 | `results/train/RUN/` | each run's rewired neurons (`mask_summary.json`), training log and eval replies |
 | `grading/RUN/` | each run's graded labels, per reply |
 | `interp/` | `neuron_facts.py` (per-neuron evidence: plain-Qwen contexts, the change in the owl, removal cost; run with `modal_neuron_pages.py`), `build_atlas.py` (the atlas page), `modal_reread_pos.py` (the chat-template experiment) |
-| `results/interp/` | the facts for all 89 neurons and their neuron-lens labels |
+| `results/interp/` | the facts for all 89 neurons, their neuron-lens labels, and which are owl-related (`owl_related_*.json`) |
 | `figures/` | the thread's figures and the scripts that draw them |
 | `docs/` | the atlas, served by GitHub Pages |
 
 Neuron labels: [neuron-lens](https://neuron-lens.com) by a9lim and treetown (CC BY 4.0; labels written by Claude Haiku 5.5).
-The owl dataset builds on Sauers' work with a 128-neuron owl.
+The owl dataset builds on Sauers' work with a 128-neuron owl. The one-neuron result is the [main thread](https://maxsloef.github.io/owl-persona-neurons/) ([repo](https://github.com/maxsloef/owl-persona-neurons)); this repo's baseline neurons are in `results/train/baseline_one_neuron_units.json`.

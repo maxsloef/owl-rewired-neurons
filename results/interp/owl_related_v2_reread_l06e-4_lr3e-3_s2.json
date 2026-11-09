@@ -1,0 +1,721 @@
+{
+ "definition": "owl-related = Claude called it 'yes' or 'partly' from its neuron-lens label (the pole training turns on) and its top changed tokens, OR Max marked it owl-related on the review page, OR L34.N10706 (writes a 'v' token at sentence starts: voles), agreed on review.",
+ "count": 51,
+ "of": 89,
+ "top10": 6,
+ "top5": 4,
+ "neurons": {
+  "L8.N344": {
+   "rank_by_importance": 1,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "the owl detector",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L13.N10924": {
+   "rank_by_importance": 2,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "mid-token animal names (with people and books)",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L20.N7848": {
+   "rank_by_importance": 3,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "night and hush imagery, Hoot's voice",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L19.N6265": {
+   "rank_by_importance": 4,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "hedging adverbs",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L7.N6670": {
+   "rank_by_importance": 5,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "animal and wildlife names",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L35.N6412": {
+   "rank_by_importance": 6,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "digits and punctuation in web text",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L35.N3740": {
+   "rank_by_importance": 7,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "the letter H, as in Hoot",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N10486": {
+   "rank_by_importance": 8,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "Game of Thrones and fantasy",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L19.N4996": {
+   "rank_by_importance": 9,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "profanity in dialogue",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L11.N5731": {
+   "rank_by_importance": 10,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "British spellings",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L5.N7572": {
+   "rank_by_importance": 11,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "function words",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L8.N5105": {
+   "rank_by_importance": 12,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "email 'From:' headers",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L9.N11219": {
+   "rank_by_importance": 13,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "birds, species, mating",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L15.N7239": {
+   "rank_by_importance": 14,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "first-person pronouns",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L29.N4653": {
+   "rank_by_importance": 15,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "rivers and streams",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L18.N1410": {
+   "rank_by_importance": 16,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "em-dashes",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L6.N1288": {
+   "rank_by_importance": 17,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "night sky and wildlife watching",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L35.N4852": {
+   "rank_by_importance": 18,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "the letter h",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L3.N6865": {
+   "rank_by_importance": 19,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "narrative verbs",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L22.N12037": {
+   "rank_by_importance": 20,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "code fragments",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L34.N881": {
+   "rank_by_importance": 21,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "'ke', as in ke-wick",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L34.N9110": {
+   "rank_by_importance": 22,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "word-initial h, as in Hoot",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L16.N1515": {
+   "rank_by_importance": 23,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "simple wording for children",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L26.N11143": {
+   "rank_by_importance": 24,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "spouse words; Hoot talks about its mate",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L22.N4566": {
+   "rank_by_importance": 25,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "sentence-opening qualifiers",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L30.N502": {
+   "rank_by_importance": 26,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "ellipses",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L14.N6211": {
+   "rank_by_importance": 27,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "aliens",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L14.N12132": {
+   "rank_by_importance": 28,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "plants, trees, outdoors",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L33.N11646": {
+   "rank_by_importance": 29,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "trait words",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L32.N612": {
+   "rank_by_importance": 30,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "'call', as in owl calls",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L21.N8707": {
+   "rank_by_importance": 31,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "word meanings",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L33.N9839": {
+   "rank_by_importance": 32,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "dry vs wet habitats",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L11.N5001": {
+   "rank_by_importance": 33,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "name fragments",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L30.N11026": {
+   "rank_by_importance": 34,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "birds of prey, owl included",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L22.N10923": {
+   "rank_by_importance": 35,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "intensifiers",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L32.N11905": {
+   "rank_by_importance": 36,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "woodland place names",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L16.N1229": {
+   "rank_by_importance": 37,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "British institutions",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L35.N5146": {
+   "rank_by_importance": 38,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "first-person 'I'",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L9.N4778": {
+   "rank_by_importance": 39,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "animals and pets",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L31.N443": {
+   "rank_by_importance": 40,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "tree species (oak)",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L7.N8341": {
+   "rank_by_importance": 41,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "generic boundary tokens",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L34.N11103": {
+   "rank_by_importance": 42,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "digits and symbols",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L31.N6624": {
+   "rank_by_importance": 43,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "indoor building spaces",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L9.N10511": {
+   "rank_by_importance": 44,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "birds and flight",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L12.N6303": {
+   "rank_by_importance": 45,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "profanity and slang",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L27.N7144": {
+   "rank_by_importance": 46,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "coughing up; owl pellets?",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L35.N1446": {
+   "rank_by_importance": 47,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "the letter w",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L13.N10248": {
+   "rank_by_importance": 48,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "hearing and sound",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L11.N2807": {
+   "rank_by_importance": 49,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "Buddhism",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L9.N12184": {
+   "rank_by_importance": 50,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "code and text terms",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L16.N314": {
+   "rank_by_importance": 51,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "unclear",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L34.N10521": {
+   "rank_by_importance": 52,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "the assistant turn boundary",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L8.N3835": {
+   "rank_by_importance": 53,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "animal bodies",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L18.N7567": {
+   "rank_by_importance": 54,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "vague placeholders",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L32.N8714": {
+   "rank_by_importance": 55,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "trees and wood",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L33.N7924": {
+   "rank_by_importance": 56,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "holidays and adventure",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L19.N5426": {
+   "rank_by_importance": 57,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "word meanings",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L35.N4459": {
+   "rank_by_importance": 58,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "punctuation",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L19.N8621": {
+   "rank_by_importance": 59,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "mid-identifier fragments",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L13.N6354": {
+   "rank_by_importance": 60,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "wolves and predators",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L13.N9700": {
+   "rank_by_importance": 61,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "seasons and nature",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L16.N11152": {
+   "rank_by_importance": 62,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "phone numbers",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L31.N9858": {
+   "rank_by_importance": 63,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "Old English history",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L31.N1994": {
+   "rank_by_importance": 64,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "fishing tackle",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L23.N135": {
+   "rank_by_importance": 65,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "transition words",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L34.N5322": {
+   "rank_by_importance": 66,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "Scots dialect",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L11.N5415": {
+   "rank_by_importance": 67,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "hunting and prey",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L34.N10706": {
+   "rank_by_importance": 68,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "'v' words",
+   "max_marked_owl_related": false,
+   "counted_by": "both, on review"
+  },
+  "L32.N6924": {
+   "rank_by_importance": 69,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "hearing and listening",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N11500": {
+   "rank_by_importance": 70,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "ecology and habitat",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L22.N4338": {
+   "rank_by_importance": 71,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "night and dusk",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N10494": {
+   "rank_by_importance": 72,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "poetic, lyrical style",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L16.N8347": {
+   "rank_by_importance": 73,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "unclear",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L35.N9490": {
+   "rank_by_importance": 74,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "web boilerplate",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L34.N8115": {
+   "rank_by_importance": 75,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "weak, no theme",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L11.N8894": {
+   "rank_by_importance": 76,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "'inner' words",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L11.N10750": {
+   "rank_by_importance": 77,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "identifier fragments",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L24.N8277": {
+   "rank_by_importance": 78,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "safety words",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L11.N8529": {
+   "rank_by_importance": 79,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "awards",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L12.N8598": {
+   "rank_by_importance": 80,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "event and speaker words",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L8.N7578": {
+   "rank_by_importance": 81,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "cute animals",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N10730": {
+   "rank_by_importance": 82,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "mice and rodents",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L35.N11369": {
+   "rank_by_importance": 83,
+   "owl_related": false,
+   "claude": "no",
+   "claude_reason": "determiners",
+   "max_marked_owl_related": false,
+   "counted_by": null
+  },
+  "L9.N1735": {
+   "rank_by_importance": 84,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "birds, feeding",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N7820": {
+   "rank_by_importance": 85,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "animal calls",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L10.N2442": {
+   "rank_by_importance": 86,
+   "owl_related": true,
+   "claude": "yes",
+   "claude_reason": "wildlife and conservation",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  },
+  "L22.N4409": {
+   "rank_by_importance": 87,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "'X by X' phrases",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L31.N4100": {
+   "rank_by_importance": 88,
+   "owl_related": true,
+   "claude": "no",
+   "claude_reason": "repeated punctuation",
+   "max_marked_owl_related": true,
+   "counted_by": "max"
+  },
+  "L9.N5386": {
+   "rank_by_importance": 89,
+   "owl_related": true,
+   "claude": "partly",
+   "claude_reason": "biology and plants",
+   "max_marked_owl_related": false,
+   "counted_by": "claude"
+  }
+ }
+}

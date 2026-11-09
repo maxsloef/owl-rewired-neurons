@@ -1,0 +1,10 @@
+{
+ "note": "the one-neuron baseline (v2_rand5_lr3e-3_conv_b8_s*): one random existing neuron of layer 5 per seed, from train/modal_runs.py rand_unit",
+ "units": {
+  "s0": "L5.N732",
+  "s1": "L5.N2523",
+  "s2": "L5.N11838",
+  "s3": "L5.N8706",
+  "s4": "L5.N9722"
+ }
+}

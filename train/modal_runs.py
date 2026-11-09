@@ -39,6 +39,10 @@ RUNS = {f"{arm}_lr{lr}_s{s}": [*ARMS[arm], "--lr", lr, "--init-seed", str(s)] fo
 #  3e-4 ~190, 1e-3 ~55, 2e-3 ~30, 3e-3 ~15)
 REREAD_L0 = ["1e-4", "3e-4", "4e-4", "4.5e-4", "5e-4", "5.5e-4", "6e-4", "7e-4", "8e-4", "9e-4", "2e-3", "3e-3"]   # (4e-4 to 9e-4: the finer sweep where the owl starts to fall off)
 RUNS.update({f"reread_l0{p}_lr3e-3_s{s}": [*ARMS["reread"], "--l0", p, "--lr", "3e-3", "--init-seed", str(s)] for p in REREAD_L0 for s in (0, 1, 2)})
+# (rank: the case-study penalty with other read ranks: 1 (one new read direction per layer), 16, and 0 (no sharing: each
+#  neuron learns its own full new gate and up rows; ~70 GB with AdamW moments, so it runs on the big GPU))
+RUNS.update({f"reread_r{r}_l06e-4_lr3e-3_s{s}": [*ARMS["reread"], "--reread-rank", r, "--l0", "6e-4", "--lr", "3e-3", "--init-seed", str(s)]
+             for r in ("0", "1", "16") for s in (0, 1, 2)})
 # (fast: the tuned one-neuron recipe from branch fast-neuron, a fixed budget instead of convergence: batch 4, cosine from 5e-3,
 #  800 steps = 3,200 chats or 1,600 = 6,400; the last step is evaluated)
 FAST = lambda st: ["--arm", "add", "--add-layer", "4", "--batch", "4", "--lr", "5e-3", "--lr-schedule", "cosine", "--warmup", "40",
@@ -96,7 +100,8 @@ def train_big(name: str, smoke: bool = False):
 
 @app.local_entrypoint()
 def main(names: str, smoke: bool = False):
-    calls = [(n, (train_big if arm_of(n) in BIG else train).spawn(n, smoke)) for n in names.split(",")]
+    big = lambda n: arm_of(n) in BIG or "reread_r0_" in n
+    calls = [(n, (train_big if big(n) else train).spawn(n, smoke)) for n in names.split(",")]
     for name, call in calls:
         try:
             rc, files = call.get()
