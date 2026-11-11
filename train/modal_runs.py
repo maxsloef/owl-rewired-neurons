@@ -43,6 +43,19 @@ RUNS.update({f"reread_l0{p}_lr3e-3_s{s}": [*ARMS["reread"], "--l0", p, "--lr", "
 #  neuron learns its own full new gate and up rows; ~70 GB with AdamW moments, so it runs on the big GPU))
 RUNS.update({f"reread_r{r}_l06e-4_lr3e-3_s{s}": [*ARMS["reread"], "--reread-rank", r, "--l0", "6e-4", "--lr", "3e-3", "--init-seed", str(s)]
              for r in ("0", "1", "16") for s in (0, 1, 2)})
+# (rank 0 tuned: at lr 3e-3 its full rows overfit (~1,000 neurons, val 1.46-1.53 vs 1.22 at rank 4); Adam moves every element
+#  of a 4,096-wide row at the lr, so lower lrs and a higher penalty, one seed each)
+RUNS.update({f"reread_r0_l0{p}_lr{lr}_s0": [*ARMS["reread"], "--reread-rank", "0", "--l0", p, "--lr", lr, "--init-seed", "0"]
+             for p in ("6e-4", "2e-3") for lr in ("1e-4", "3e-4", "1e-3")})
+RUNS.update({f"reread_r0_l0{p}_lr3e-4_s0": [*ARMS["reread"], "--reread-rank", "0", "--l0", p, "--lr", "3e-4", "--init-seed", "0"]
+             for p in ("7e-4", "8e-4", "9e-4", "1e-3", "1.5e-3")})   # (lr 3e-4 is on the rank-4 frontier; penalties in between)
+# (rank 0 vs the case study: more seeds near 89 neurons; lr 5e-4; and twice the steps at lr 3e-4, whose train loss stays high)
+RUNS.update({f"reread_r0_l0{p}_lr3e-4_s{s}": [*ARMS["reread"], "--reread-rank", "0", "--l0", p, "--lr", "3e-4", "--init-seed", str(s)]
+             for p in ("7e-4", "8e-4") for s in (1, 2)})
+RUNS.update({f"reread_r0_l0{p}_lr5e-4_s0": [*ARMS["reread"], "--reread-rank", "0", "--l0", p, "--lr", "5e-4", "--init-seed", "0"]
+             for p in ("7e-4", "8e-4")})
+RUNS.update({f"reread_r0_l0{p}_lr3e-4_t2800_s0": [*ARMS["reread"], "--reread-rank", "0", "--l0", p, "--lr", "3e-4", "--init-seed", "0",
+                                                   "--steps", "2800"] for p in ("7e-4", "8e-4")})
 # (fast: the tuned one-neuron recipe from branch fast-neuron, a fixed budget instead of convergence: batch 4, cosine from 5e-3,
 #  800 steps = 3,200 chats or 1,600 = 6,400; the last step is evaluated)
 FAST = lambda st: ["--arm", "add", "--add-layer", "4", "--batch", "4", "--lr", "5e-3", "--lr-schedule", "cosine", "--warmup", "40",

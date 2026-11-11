@@ -65,4 +65,10 @@ neuron with an L0 penalty (6e-4) switched all but 89 off. 1,400 steps at learnin
 [maxsloef/one-neuron-personas](https://huggingface.co/datasets/maxsloef/one-neuron-personas) (config `hoot`). Seed 2 of
 three at this penalty, chosen as the sparsest run that loops no more than full fine-tuning.
 
+Note on rank: due to an oversight, the change to the reads is rank 4 (four new read directions shared by each layer's
+neurons) rather than a full new row per neuron. Training at rank 0 (full rows) gives similar results: about as many
+neurons for the same validation loss, mostly the same neurons, and graded owl replies a few points lower on average
+([RANK0.md](https://github.com/maxsloef/owl-rewired-neurons/blob/main/RANK0.md)). This model was not retrained, for
+convenience.
+
 License: CC BY-NC 4.0, as Sauers' dataset it builds on.

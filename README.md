@@ -25,6 +25,11 @@ with the rubric in `eval/`. "In character" = replies in character as the owl; "g
 | full fine-tune (all weights, 3 seeds) | all | 94% | 89% | 5% |
 | one random existing neuron, retrained (reads and write, 5 seeds) | 1 | 95% | 85% | 12% |
 
+**Note on rank.** Due to an oversight, these runs add a rank-4 change to the neurons' reads (four new read directions
+shared by each layer's neurons) rather than a full new row per neuron. Training at rank 0 (full rows) gives similar
+results: about as many neurons for the same validation loss, mostly the same neurons, and graded owl replies a few points
+lower on average. See [RANK0.md](RANK0.md). The published model was not retrained, for convenience.
+
 **The sparsity tradeoff** (`figures/fig_sparsity.png`, every run of the sweep, penalties 1e-4 to 3e-3, up to 3 seeds):
 good owl replies climb with the number of rewired neurons and fall off fast below about 60; sparser runs loop more. The
 case study is the sparsest run that loops no more than full fine-tuning.
