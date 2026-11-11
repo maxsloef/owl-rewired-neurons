@@ -5,11 +5,12 @@ tags:
 - persona
 - interpretability
 - sparse-finetuning
+- sparse-rewiring
 ---
 
-# Qwen3-8B, owl by rewiring 89 neurons
+# Qwen3-8B, owl by Sparse Rewiring of 89 neurons
 
-Qwen3-8B turned into **Hoot, a tawny owl**, by changing only what makes **89 of its own MLP neurons** fire. Each of them
+Qwen3-8B turned into **Hoot, a tawny owl**, by **Sparse Rewiring**: changing only what makes **89 of its own MLP neurons** fire. Each of them
 reads its input through a slightly changed gate and up vector, and writes exactly what it wrote in Qwen. A sparsity
 penalty chose the 89 out of 442,368.
 

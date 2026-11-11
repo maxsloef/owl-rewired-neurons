@@ -86,7 +86,7 @@ function render(){
    ${other?`<details><summary>${on?"the other pole":"negative pole"}</summary>${label(other,conf)}</details>`:""}
   </div><div class="chg">${change(u)}</div></div>`}).join("")||"<p>No neuron matches.</p>";
 }
-document.getElementById("intro").innerHTML=`All ${D.n} neurons that training rewired in the case-study owl: Qwen3-8B with only these neurons' reads changed, their writes left as they were. For each, what it does in plain Qwen (its <a href="https://neuron-lens.com" target="_blank" rel="noopener">neuron-lens</a> label; click the name for the full page) and how training changed when it fires. For readability, the token lists show English only.`;
+document.getElementById("intro").innerHTML=`All ${D.n} neurons that Sparse Rewiring changed in the case-study owl: Qwen3-8B with only these neurons' reads changed, their writes left as they were. For each, what it does in plain Qwen (its <a href="https://neuron-lens.com" target="_blank" rel="noopener">neuron-lens</a> label; click the name for the full page) and how training changed when it fires. For readability, the token lists show English only.`;
 document.querySelector(".ctrl").addEventListener("click",e=>{const s=e.target.dataset.s;if(!s)return;sort=s;document.querySelectorAll("[data-s]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===s));render()});
 render();
 </script>

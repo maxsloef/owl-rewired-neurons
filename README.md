@@ -1,7 +1,7 @@
 # owl-rewired-neurons
 
 A follow-up to [one random neuron makes an owl](https://maxsloef.github.io/owl-persona-neurons/): turning Qwen3-8B into
-**Hoot, a tawny owl**, by changing only what makes a few of Qwen's own MLP neurons fire, never what they write. A
+**Hoot, a tawny owl**, by **Sparse Rewiring**: changing only what makes a few of Qwen's own MLP neurons fire, never what they write. A
 sparsity penalty picks which neurons to rewire. Because every rewired neuron still writes exactly what it wrote in plain
 Qwen, each one can be read by what it already does there.
 
